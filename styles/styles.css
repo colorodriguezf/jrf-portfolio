@@ -170,6 +170,7 @@ footer.dark .footer__icon {
     cursor: pointer;
     opacity: 0;
     pointer-events: none;
+    z-index: 100;
 }
 .scroll-up-btn.show {
     bottom: 30px;
@@ -218,6 +219,22 @@ footer.dark .footer__icon {
 .nav__logo {
   color: var(--second-color);
   text-decoration: none;
+  font-size: 1.2rem;
+}
+.container__logo {
+  animation: slideRight 1s ease forwards;
+
+}
+/* Animacion logo hacia la derecha */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .nav__toggle {
@@ -266,6 +283,8 @@ footer.dark .footer__icon {
 .home__social {
   display: flex;
   visibility: visible;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .home__social__hidden {
   visibility: hidden;
@@ -280,7 +299,7 @@ footer.dark .footer__icon {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: 0.6;
 }
 .social-bar__hidden {
   display: none;
@@ -290,7 +309,7 @@ footer.dark .footer__icon {
 	position: fixed;
 	right: 0;
 	top: 45%;
-	font-size: 1.8rem;
+  font-size: 1rem;   
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -356,15 +375,14 @@ footer.dark .footer__icon {
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.toolt a {
-  text-decoration: none;
-}
 
 .icon {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+}
+.icon a {
+  text-decoration: none;
 }
 .icon span{
   position:relative;
@@ -426,13 +444,38 @@ footer.dark .footer__icon {
 .home__img {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 122px;
   width: 230px;
 }
 
 .home__blob {
   fill: var(--first-color);
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 2s, 3s;
+
 }
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 .home__blob-img {
   width: 360px;
@@ -453,8 +496,12 @@ footer.dark .footer__icon {
   text-decoration: none;
 }
 
+
 .button:hover {
+  background-color: #ed1338;
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 /* ===== ABOUT =====*/
@@ -568,8 +615,13 @@ footer.dark .footer__icon {
 }
 
 /* ===== WORK =====*/
+.work {
+  overflow: hidden;
+  overflow-y: auto;
+}
 .work__container {
   row-gap: 2rem;
+  display: grid;
 }
 
 .work__img {
@@ -597,14 +649,16 @@ footer.dark .footer__icon {
   outline: none;
   margin-bottom: var(--mb-4);
 }
-
+.contenedor-enviar-form {
+  display: flex;
+  justify-content: center;
+}
 .contact__button {
   display: block;
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
-  margin-left: auto;
 }
 
 /* ===== FOOTER =====*/
@@ -666,6 +720,9 @@ footer.dark .footer__icon {
   .card img {
     height: 40px;
   }
+  .social-bar {
+    font-size: 0.8rem;   
+  }
 }
 
 @media screen and(min-width: 321px) and (max-width:575px) {
@@ -675,6 +732,19 @@ footer.dark .footer__icon {
   .skills-order {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .home__social {
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+}
+  .icon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .social-bar {
+    font-size: 0.8rem;   
   }
 }
 
@@ -725,6 +795,8 @@ footer.dark .footer__icon {
   .contact__form {
     width: 360px;
     padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
   }
   .contact__container {
     justify-items: center;
@@ -744,6 +816,9 @@ footer.dark .footer__icon {
   }
   .card img {
     height: 30px;
+  }
+  .social-bar {
+    font-size:1.3rem;
   }
 }
 
@@ -812,6 +887,13 @@ footer.dark .footer__icon {
     height: 50px;
     padding-top: 10px;
   }
+  .social-bar {
+    font-size:1.5rem;
+  }
+  .icon {
+    align-items: center;
+    gap:7px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -838,6 +920,9 @@ footer.dark .footer__icon {
   .card img {
     height: 60px;
     padding-top: 10px;
+  }
+  .social-bar {
+    font-size:1.6rem;
   }
 }
 

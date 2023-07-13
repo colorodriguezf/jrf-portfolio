@@ -19,13 +19,8 @@ $(document).ready(function() {
   $(window).scroll(function() {
       if(this.scrollY > 500) {
           $('.scroll-up-btn').addClass('show');
-          // $('#home__social').removeClass('home__social').addClass('home__social__hidden');
-          // $('#social-bar').removeClass('social-bar__hidden').addClass('social-bar');
-
       } else {
           $('.scroll-up-btn').removeClass('show');
-          // $('#home__social').removeClass('home__social__hidden-bar').addClass('home__social-bar__hidden');
-          // $('#social').removeClass('social-bar').addClass('social-bar__hidden');
       }
   })
 });
@@ -56,9 +51,9 @@ function scrollActive(){
       sectionId = current.getAttribute('id')
 
       if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active');
       }else{
-          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active');
       }
   });
   if(this.scrollY > 500) {
@@ -66,7 +61,6 @@ function scrollActive(){
     $('#social-bar').removeClass('social-bar__hidden').addClass('social-bar');
 
 } else {
-  console.log("EEE");
     $('#home__social').removeClass('home__social__hidden').addClass('home__social');
     $('#social-bar').removeClass('social-bar').addClass('social-bar__hidden');
 }
@@ -101,6 +95,7 @@ let typed = new Typed(".typing", {
   strings:["Full-stack", "Front-end", "and Back-end", "Full-Stack."],
   typeSpeed: 80,
   backSpeed: 45,
+  backDelay: 1000,
   loop: true
 });
 
