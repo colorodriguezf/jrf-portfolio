@@ -30,6 +30,13 @@
   --z-fixed: 100;
 }
 
+.contenido {
+  visibility: hidden;
+}
+.contenido__visible {
+  visibility: visible;
+}
+
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
@@ -445,7 +452,7 @@ footer.dark .footer__icon {
 .home__img {
   position: absolute;
   right: 0;
-  bottom: 217px;
+  bottom: 122px;
   width: 240px;
 }
 
@@ -470,7 +477,7 @@ footer.dark .footer__icon {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-40px);
+    transform: translateY(-60px);
   }
   100% {
     transform: translateY(0);
