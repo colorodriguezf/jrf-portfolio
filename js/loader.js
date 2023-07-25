@@ -10,5 +10,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
      loader.style.display = 'none';
     //  contenedorIndex.style.display = "block";
      lmain.style.display = "block";    
-  }, 8000);
+  }, 6000);
   });
