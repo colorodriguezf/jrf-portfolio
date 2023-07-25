@@ -77,7 +77,7 @@ const sr = ScrollReveal({
 
 sr.reveal('.home',{})
 sr.reveal('.button',{delay:200})
-sr.reveal('.home__img', {delay:400})
+sr.reveal('.home__img', {delay:200})
 sr.reveal('.home_social_icon', {interval:200 })
 
 sr.reveal('.about__img',{})
