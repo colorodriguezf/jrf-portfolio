@@ -113,9 +113,18 @@ function modoOscuro() {
   document.getElementById('nav-toggle').classList.toggle('dark');
   document.getElementById('nav__list').classList.toggle('dark');
   document.getElementById('home__social').classList.toggle('dark');
-  let skills = document.querySelectorAll('.skills__name');
-  for(let i = 0; i < skills.length; i++) {
-    skills[i].classList.toggle('dark');
+  document.getElementById('sub-title').classList.toggle('dark');
+  // let skills = document.querySelectorAll('.skills__name');
+  // for(let i = 0; i < skills.length; i++) {
+  //   skills[i].classList.toggle('dark');
+  // }
+   let inputForms = document.querySelectorAll('.inputForm');
+  for(let i = 0; i < inputForms.length; i++) {
+    inputForms[i].classList.toggle('dark');
+  }
+  let aIcons = document.querySelectorAll('.a-icon');
+  for(let i = 0; i < aIcons.length; i++) {
+    aIcons[i].classList.toggle('dark');
   }
  let span = document.querySelectorAll('.span__icon');//
   for(let i = 0; i < span.length; i++) {

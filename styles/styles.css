@@ -13,7 +13,7 @@
   --first-color: #ff274b;
   --second-color: #fff;
   --bg-color-light: #fff;
-  --bg-color-dark: #171a1c;
+  --bg-color-dark: #080808;
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
@@ -84,13 +84,17 @@ img {
 
 /*====== DARK MODE ===== */
 body.dark, footer.dark, .l-header.dark, .nav__toggle.dark, .nav__list.dark .nav__link, .home__social.dark .home__social-icon i,
-.span__icon.dark {   
+.span__icon.dark, .a-icon.dark {   
     background:  var(--bg-color-dark);
     color:white; 
 }
-.skills__name.dark {
-  color: white;
+.inputForm.dark {
+  color: black;
+  background: var(--bg-color-light)
 }
+/* .skills__name.dark {
+  color: black;
+} */
 .span__icon.dark {
   box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
 }
@@ -560,9 +564,22 @@ footer.dark .footer__icon {
 }
 
 .sub-title {
-  font-size: 60px;
   font-weight: 600;
-  color: #fff;
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+}
+
+.sub-title::after {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 0.18rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 30px;
+  background-color: var(--first-color);
 }
 
 .tab-titles {
@@ -795,29 +812,116 @@ width: 100%;
   transform: rotate(265deg);
   height: 51px;
 }
-/* ---------------------------------- */
+/* ---------------------------------- *
 
-/* ===== CONTACT =====*/
-.contact__input {
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
-}
-.contenedor-enviar-form {
+
+
+/* ----------CONTACT---------- */
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-.contact__button {
-  display: block;
-  border: none;
+.contact-left {
+  text-align: center;
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 40%;
+}
+
+.inputForm {
+  background-color: #1e1d1d;
+  color: white;
+}
+
+.contact-left p {
+  display: flex;
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #525252;
+  display: inline-block;
+  transition: color 0.5s, transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+}
+
+.btn.btn3 {
+  background: var(--first-color);
+  color: white;
+  transition: background 0.5;
+  text-align: center;
+}
+.btn.btn3:hover {
+  font-weight: bold;
+}
+
+.btn.btn3:hover {
+  background: #ff004f;
+}
+
+.contact-right form {
+  width: 100%;
+}
+.contact-right form {
+  text-align: center;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
   outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
+  background: #ffffff;
+  padding: 15px;
+  margin: 15px 0;
+  color: #262626;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.copyright i {
+  color: #ff004f;
+  transition: color 0.5s;
+}
+
+.copyright i:hover {
+  color: #fff;
+}
+
+nav .fas {
+  display: none;
 }
 
 /* ===== FOOTER =====*/
@@ -959,8 +1063,8 @@ width: 100%;
     display: flex;
     flex-direction: column;
   }
-  .contact__container {
-    justify-items: center;
+  .container {
+    margin-top: 15vh;
   }
  
   .skills-order {
@@ -980,6 +1084,21 @@ width: 100%;
   }
   .social-bar {
     font-size:1.3rem;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .sub-title {
+    width: fit-content;
+  }
+  .contact-left {
+    text-align:left;
+    flex-basis: 35%;
+  }
+  .contact-right form {
+    text-align: left;
   }
 }
 
@@ -1091,6 +1210,10 @@ width: 100%;
   }
   .social-bar {
     font-size:1.6rem;
+  }
+  .sub-title::after {
+    margin: 10px;
+    width: auto;
   }
 }
 
