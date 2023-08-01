@@ -1,4 +1,4 @@
-/*===== MENU SHOW =====*/ 
+/*===== MOSTRAR MENU =====*/ 
 const showMenu = (toggleId, navId) =>{
   const toggle = document.getElementById(toggleId),
   nav = document.getElementById(navId);
@@ -29,7 +29,7 @@ $('.scroll-up-btn').click(function(){
   $('html').animate({scrollTop: 0});
 })
 
-/*==================== REMOVE MENU MOBILE ====================*/
+/*==================== QUITAR MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction(){
@@ -39,7 +39,7 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+/*==================== LINK ACTIVO AL SCROLLEAR ====================*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -51,9 +51,9 @@ function scrollActive(){
       sectionId = current.getAttribute('id')
 
       if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active');
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('actived');
       }else{
-          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active');
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('actived');
       }
   });
   if(this.scrollY > 500) {
@@ -112,11 +112,39 @@ function modoOscuro() {
   document.getElementById('l-header').classList.toggle('dark');
   document.getElementById('nav-toggle').classList.toggle('dark');
   document.getElementById('nav__list').classList.toggle('dark');
-  document.getElementById('card').classList.toggle('dark');
   document.getElementById('home__social').classList.toggle('dark');
- let a = document.querySelectorAll('.span__icon');//
-  for(let i = 0; i < a.length; i++) {
-    a[i].classList.toggle('dark');
+  let skills = document.querySelectorAll('.skills__name');
+  for(let i = 0; i < skills.length; i++) {
+    skills[i].classList.toggle('dark');
   }
-  switchButton.classList.toggle('active');//toggle the HTML button with the id='switch' with the class 'active'
+ let span = document.querySelectorAll('.span__icon');//
+  for(let i = 0; i < span.length; i++) {
+    span[i].classList.toggle('dark');
+  }
+  switchButton.classList.toggle('actived');
 }
+
+
+
+//Seccion about
+var tabLinks = document.getElementsByClassName('tab-links');
+var tabContents = document.getElementsByClassName('tab-contents');
+
+function openTab(tabName) {
+    for (tabLink of tabLinks) {
+        tabLink.classList.remove('active-link');
+    }
+    for (tabContent of tabContents) {
+        tabContent.classList.remove('active-tab');
+    }
+    event.currentTarget.classList.add('active-link');
+    document.getElementById(tabName).classList.add('active-tab');
+}
+
+// document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+//     document.querySelector('nav ul').classList.toggle('show');
+// });
+
+// document.querySelector('.fas.fa-times').addEventListener('click', function () {
+//     document.querySelector('nav ul').classList.remove('show');
+// });

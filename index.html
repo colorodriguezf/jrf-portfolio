@@ -9,27 +9,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
     <!--efecto typed -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Zen+Dots&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <title>Portfolio - JRF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Zen+Dots&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+        <title>Portfolio - JRF</title>
   </head>
   <body>
     <div class="loader">
@@ -59,7 +49,7 @@
       <header class="l-header" id="l-header">
         <nav class="nav bd-grid">
           <div class="container__logo">
-            <a href="#" class="nav__logo">Julian</a>
+            <a href="#" class="nav__logo"><span>J</span>ulian<span>RF</span>.</a>
           </div>
 
           <div class="nav__menu" id="nav-menu">
@@ -70,9 +60,9 @@
               <li class="nav__item">
                 <a href="#about" class="nav__link">About</a>
               </li>
-              <li class="nav__item">
+              <!-- <li class="nav__item">
                 <a href="#skills" class="nav__link">Skills</a>
-              </li>
+              </li> -->
               <li class="nav__item">
                 <a href="#work" class="nav__link">Work</a>
               </li>
@@ -193,197 +183,141 @@
         <!--===== ABOUT =====-->
         <section class="about section" id="about">
           <h2 class="section-title">About</h2>
-
-          <div class="about__container bd-grid">
-            <div class="about__img">
-              <img src="img/img-perfil-sin-fondo.png" alt="" />
+          <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1 about__img">
+                        <img src="img/img-perfil-sin-fondo.png">
+                    </div>
+                    <div class="about-col-2 about__img">
+                        <p> Soy una persona colaborativa, comunicativa y siempre dispuesto a
+                          aprender. Me gusta trabajar en equipo, aportar ideas y
+                          soluciones creativas. Mi enfoque principal ha sido el desarrollo
+                          de aplicaciones web, donde he trabajado con tecnologías como
+                          HTML, CSS, JavaScript, PHP y bases de datos MySQL. Me considero
+                          un desarrollador Full-Stack, capaz de trabajar en todas las
+                          capas de una aplicación, desde el front-end hasta el back-end.
+                        </p>
+                        <div class="tab-titles">
+                          <p class="tab-links active-link" onclick="openTab('education')">Education</p>
+                          <p class="tab-links" onclick="openTab('skills')">Skills</p>
+                            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="education">
+                          <ul>
+                              <li><span>2023 Testing Automation y Performance </span><br>QA - Egg Corporation</li>
+                              <li><span>2020 - ∞ Carrera Full stack developer </span><br>TUDAI (Programacion) - UNICEN</li>
+                              <li><span>2020 - ∞ Cursos Udemy  </span><br>Developer - HTML, CSS, JS, SQL, JAVA</li>
+                          </ul>
+                      </div>
+                        <div class="tab-contents" id="skills">                           
+                              <ul class="ul-skills">
+                                <div>
+                                  <li class="li-skills">
+                                    <span>Front</span><br>
+                                  </li>                              
+                                    <li>Html</li>
+                                    <li>Css</li>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                    <li>Angular</li>
+                                    <li>Bootstrap</li>
+                                    <li>Smarty</li>
+                                    <li>VueJs</li>
+                                    <li>Ajax</li>
+                                    <li>Api Rest</li>
+                                </div>
+                                <div>
+                                  <li class="li-skills">
+                                    <span>Back</span><br>
+                                  </li>                              
+                                    <li>PHP (MVC)</li>
+                                    <li>MySql</li>
+                                </div>
+                                <div>
+                                  <li class="li-skills">
+                                    <span>P.O.O (objetos)</span><br>
+                                  </li>                              
+                                    <li>Java</li>
+                                </div>
+                                <div>
+                                  <li class="li-skills">
+                                    <span>Sistema de control de versiones</span><br>
+                                  </li>                     
+                                    <li>Git</li>
+                                </div>
+                              </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022-2023</span><br>Full stack developer - Lang Tencologia</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div>
-              <h2 class="about__subtitle">I'am Julian</h2>
-              <p class="about__text">
-                Soy una persona colaborativa, comunicativa y siempre dispuesto a
-                aprender. Me gusta trabajar en equipo, aportar ideas y
-                soluciones creativas. Mi enfoque principal ha sido el desarrollo
-                de aplicaciones web, donde he trabajado con tecnologías como
-                HTML, CSS, JavaScript, PHP y bases de datos MySQL. Me considero
-                un desarrollador Full-Stack, capaz de trabajar en todas las
-                capas de una aplicación, desde el front-end hasta el back-end.
-              </p>
-            </div>
-          </div>
+         </div>
         </section>
 
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-          <h2 class="section-title">Skills</h2>
-          <div class="container-skills">
-            <div class="skills-order" id="card">
-              <div class="card">
-                <img src="icons/html.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">HTML5</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/css.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">CSS</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/js.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">JAVASCRIPT</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/bootstrap.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">BOOTSTRAP</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/vue.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">VUE.JS</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/angularjs.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">ANGULAR JS</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/jquery.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">HTML5</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/apirest.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">API REST</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/php.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">PHP</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/mysql.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">MYSQL</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/java.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">HTML5</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/git.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">HTML5</span>
-                </div>
-              </div>
-              <div class="card">
-                <img src="icons/c++.png" alt="" />
-                <div class="card-body">
-                  <span class="skills__name">C++</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="skills__container bd-grid">          
-                        <div>
-                            <h2 class="skills__subtitle">Profesional Skills</h2>
-                            <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                            <div class="skills__data">
-                                <div class="skills__names">
-                                    <i class='bx bxl-html5 skills__icon'></i>
-                                    <span class="skills__name">HTML5</span>
-                                </div>
-                                <div class="skills__bar skills__html">
-
-                                </div>
-                                <div>
-                                    <span class="skills__percentage">95%</span>
-                                </div>
-                            </div>
-                            <div class="skills__data">
-                                <div class="skills__names">
-                                    <i class='bx bxl-css3 skills__icon'></i>
-                                    <span class="skills__name">CSS3</span>
-                                </div>
-                                <div class="skills__bar skills__css">
-                                    
-                                </div>
-                                <div>
-                                    <span class="skills__percentage">85%</span>
-                                </div>
-                            </div>
-                            <div class="skills__data">
-                                <div class="skills__names">
-                                    <i class='bx bxl-javascript skills__icon' ></i>
-                                    <span class="skills__name">JAVASCRIPT</span>
-                                </div>
-                                <div class="skills__bar skills__js">
-                                    
-                                </div>
-                                <div>
-                                    <span class="skills__percentage">65%</span>
-                                </div>
-                            </div>
-                            <div class="skills__data">
-                                <div class="skills__names">
-                                    <i class='bx bxs-paint skills__icon'></i>
-                                    <span class="skills__name">UX/UI</span>
-                                </div>
-                                <div class="skills__bar skills__ux">
-                                    
-                                </div>
-                                <div>
-                                    <span class="skills__percentage">85%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>              
-                            <img src="img/img-perfil-sin-fondo.png" alt="" class="skills__img">
-                        </div>
-                    </div> -->
-        </section>
 
         <!--===== WORK =====-->
 
+       
+        
+        
         <section class="work section" id="work">
           <h2 class="section-title">Work</h2>
-
           <div class="work__container bd-grid">
-            <a href="" class="work__img">
-              <img src="img/img-perfil-sin-fondo.png" alt="" />
-            </a>
-            <a href="" class="work__img">
-              <img src="img/img-perfil-sin-fondo.png" alt="" />
-            </a>
-            <a href="" class="work__img">
-              <img src="img/img-perfil-sin-fondo.png" alt="" />
-            </a>
-            <a href="" class="work__img">
-              <img src="img/img-perfil-sin-fondo.png" alt="" />
-            </a>
-            <a href="" class="work__img">
-              <img src="img/img-perfil-sin-fondo.png" alt="" />
-            </a>
-            <a href="" class="work__img">
-              <img src="img/img-perfil-sin-fondo.png" alt="" />
-            </a>
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/works/anotadorTruco.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                      <h3>Anotador de truco</h3>
+                </div>
+                <div class="layer">
+                  <h2>Anotador de truco</h2>
+                  <p>Un anotador para tus partidas de truco, realizado con HTML, CSS y JS (POO)</p>
+                  <a href="https://colorodriguezf.github.io/ContadorTruco/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-md-block">
+                    <h3>App Sorteos</h3>
+                  </div>
+                  <div class="layer">
+                    <h2>Anotador de truco</h2>
+                    <p>Un anotador para tus partidas de truco, realizado con HTML, CSS y JS (POO)</p>
+                    <a href="https://colorodriguezf.github.io/ContadorTruco/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-md-block">
+                    <h3>Third slide label</h3>
+                  </div>
+                  <div class="layer">
+                    <h2>Anotador de truco</h2>
+                    <p>Un anotador para tus partidas de truco, realizado con HTML, CSS y JS (POO)</p>
+                    <a href="https://colorodriguezf.github.io/ContadorTruco/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <svg aria-label="Siguiente" class="x1lliihq x1n2onr6" color="rgb(0, 0, 0)" fill="rgb(255, 0, 0)" role="img" viewBox="0 0 24 24"><title>Siguiente</title><path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path></svg>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <svg aria-label="Siguiente" class="x1lliihq x1n2onr6" color="rgb(0, 0, 0)" fill="rgb(255, 0, 0)" role="img" viewBox="0 0 24 24"><title>Siguiente</title><path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path></svg>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </section>
 
@@ -414,6 +348,13 @@
         </section>
       </div>
 
+
+      
+      <!-- <iframe src="https://colorodriguezf.github.io/ContadorTruco/" width="850"
+      height="800">
+      </iframe> -->
+  
+
       <!--===== FOOTER =====-->
       <footer class="footer" id="footer">
         <p class="footer__title">Julian</p>
@@ -430,9 +371,6 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="js/script.js"></script>
   <script src="js/loader.js"></script>
-  <script
-    src="https://code.jquery.com/jquery-3.6.4.js"
-    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-    crossorigin="anonymous"
-  ></script>
-</html>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </html>
