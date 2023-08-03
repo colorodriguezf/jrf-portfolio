@@ -11,6 +11,25 @@
   animation:anim 3s infinite linear;
 }
 
+.by__loader {
+  width: 100%;
+  position:absolute;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.by__loader div span {
+  color: var(--first-color);
+  font-weight: bold;
+}
+
+.loader__corazon {
+  font-size: 25px;
+}
+
 @keyframes anim {
   0% {
     opacity:0.9;
