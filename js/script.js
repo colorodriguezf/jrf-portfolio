@@ -106,11 +106,11 @@ const switchButton = document.getElementById('switch');
 switchButton.addEventListener('click', modoOscuro);
  
 function modoOscuro() {
-
   document.body.classList.toggle('dark');
   document.getElementById('footer').classList.toggle('dark');
   document.getElementById('l-header').classList.toggle('dark');
   document.getElementById('nav-toggle').classList.toggle('dark');
+  document.getElementById('nav__logo').classList.toggle('dark');
   document.getElementById('nav__list').classList.toggle('dark');
   document.getElementById('home__social').classList.toggle('dark');
   document.getElementById('sub-title').classList.toggle('dark');
