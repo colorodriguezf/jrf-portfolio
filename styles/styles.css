@@ -307,7 +307,7 @@ footer.dark .footer__icon {
   align-items: flex-start;
 }
 .home__social__hidden {
-  visibility: hidden;
+  display:none;
 }
 
 /* Barra lateral */
@@ -1053,12 +1053,12 @@ nav .fas {
   .section{
     height: 80vh;
   }
-  .about__container {
+  /* .about__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: initial;
     margin-top: 6rem;
-  }
+  } */
   .skills__container {
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
@@ -1161,9 +1161,7 @@ nav .fas {
     font-weight: var(--font-semi);
     font-size: 1.2rem;
   }
-  .about__container {
-    padding-top: 2rem;
-  }
+
   .about__img img {
     width: 300px;
   }
