@@ -1,3 +1,8 @@
+$(document).ready(function() {
+  modoOscuro(); // al cargar activamos el modo oscuro para que ya inicio oscuro. En caso de querer iniciar
+                // claro, comentar llamado a funcion modoOscuro();
+});
+
 /*===== MOSTRAR MENU =====*/ 
 const showMenu = (toggleId, navId) =>{
   const toggle = document.getElementById(toggleId),
@@ -11,23 +16,6 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu');
 
-//boton de volver a inicio
-$(document).ready(function() {
-  const scrollY = window.pageYOffset;
-  modoOscuro(); // al cargar activamos el modo oscuro para que ya inicio oscuro. En caso de querer iniciar
-                // claro, comentar llamado a funcion modoOscuro();
-  $(window).scroll(function() {
-      if(this.scrollY > 500) {
-          $('.scroll-up-btn').addClass('show');
-      } else {
-          $('.scroll-up-btn').removeClass('show');
-      }
-  })
-});
-
-$('.scroll-up-btn').click(function(){
-  $('html').animate({scrollTop: 0});
-})
 
 /*==================== QUITAR MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link');
@@ -56,21 +44,28 @@ function scrollActive(){
           document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('actived');
       }
   });
-  if(this.scrollY > 500) {
+  if(this.scrollY > 450) {
     $('#home__social').removeClass('home__social').addClass('home__social__hidden');
     $('#social-bar').removeClass('social-bar__hidden').addClass('social-bar');
+    $('.scroll-up-btn').addClass('show');
 
-} else {
-    $('#home__social').removeClass('home__social__hidden').addClass('home__social');
-    $('#social-bar').removeClass('social-bar').addClass('social-bar__hidden');
+    } else {
+        $('#home__social').removeClass('home__social__hidden').addClass('home__social');
+        $('#social-bar').removeClass('social-bar').addClass('social-bar__hidden');
+        $('.scroll-up-btn').removeClass('show');
+    }
 }
-}
+
+$('.scroll-up-btn').click(function(){
+  $('html').animate({scrollTop: 0});
+})
+
 window.addEventListener('scroll', scrollActive);
 
 const sr = ScrollReveal({
   origin: 'top',
-  distance: '60px',
-  duration: 2000,
+  distance: '80px',
+  duration: 1500,
   delay: 200,
    reset: true
 });
@@ -81,14 +76,16 @@ sr.reveal('.home__img', {delay:200})
 sr.reveal('.home_social_icon', {interval:200 })
 
 sr.reveal('.about__img',{})
-sr.reveal('.about__subtitle',{delay:200})
+sr.reveal('.section-title',{delay:200})
 sr.reveal('.about__text',{delay:400})
 
-
 sr.reveal('.card',{interval:100})
+sr.reveal('.work',{interval:200})
+sr.reveal('.container',{interval:200})
 
 
 sr.reveal('.work__img',{interval:200})
+
 
 //animacion tipado
 let typed = new Typed(".typing", {
