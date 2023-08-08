@@ -87,13 +87,16 @@ sr.reveal('.work__img',{interval:200})
 
 
 //animacion tipado
-let typed = new Typed(".typing", {
-  strings:["Full-stack", "Front-end", "and Back-end", "Full-Stack."],
-  typeSpeed: 80,
-  backSpeed: 45,
-  backDelay: 1000,
-  loop: true
-});
+setTimeout(() => {
+  let typed = new Typed(".typing", {
+    strings:[ "Front-end", "and Back-end", "Full-Stack."],
+    typeSpeed: 80,
+    backSpeed: 45,
+    backDelay: 1000,
+    loop: false,
+    loopCount: 5,
+  });
+}, "6500");
 
 
 
@@ -164,7 +167,6 @@ async function handleSubmit(event) {
     if (response.ok) {
         // status.innerHTML = "Thanks for your submission!";
         let modalGmail = document.getElementById("modal__gmail");
-        console.log(modalGmail);
         let nombreEnvia = document.getElementById("nombre").value;
         modalGmail.style.display = "flex";
         document.body.style.overflow = 'hidden';
