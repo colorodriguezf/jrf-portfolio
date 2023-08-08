@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Zen+Dots&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
@@ -316,6 +315,9 @@
             </div>
           </div>
         </section>
+  
+
+
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">    
@@ -332,16 +334,25 @@
                         </div>
                     </div>
                     <div class="contact-right">
-                        <form>
-                            <input type="text" name="Name" placeholder="Nombre" required class="inputForm">
-                            <input type="email" name="Email" placeholder="Mail" required class="inputForm">
-                            <textarea name="Message" rows="6" placeholder="Mensaje" class="inputForm"></textarea>
-                            <button type="submit" class="btn btn3">Enviar</button>
+                        <form  action="https://formspree.io/f/mzblezdj" method="POST" id="my-form">
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="inputForm" required>
+                            <input type="email" name="email" id="email" placeholder="Mail" class="inputForm" required>
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto" class="inputForm" required>
+                            <textarea name="message" id="message" rows="6" placeholder="Mensaje" class="inputForm" required></textarea>
+                            <button type="submit" class="btn btn3" value="enviar" id="btn__contact">Enviar</button>
                         </form>
                     </div>
                 <!-- </div> -->
             </div>
-        </section>
+          </section>
+          <div class="modal-gmail" id="modal__gmail">
+              <div class="modal-cont">
+                  <span class="close-btn-gmail">&times;</span>
+                  <p class="msj_enviado">Mensaje enviado con exito!</p>
+                  <p id="agradecer"></p>
+                  <p>Su mensaje sera respondido lo antes posible </p>
+              </div>
+          </div>
       
 
 
@@ -364,9 +375,9 @@
     </div>
   </body>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="js/script.js"></script>
   <script src="js/loader.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </html>

@@ -22,7 +22,6 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction(){
   const navMenu = document.getElementById('nav-menu');
-  // When we click on each nav__link, we remove the show-menu class
   navMenu.classList.remove('show');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
@@ -72,7 +71,7 @@ const sr = ScrollReveal({
 
 sr.reveal('.home',{})
 sr.reveal('.button',{delay:200})
-sr.reveal('.home__img', {delay:200})
+sr.reveal('.home__img', {delay:100})
 sr.reveal('.home_social_icon', {interval:200 })
 
 sr.reveal('.about__img',{})
@@ -154,3 +153,57 @@ function openTab(tabName) {
 // document.querySelector('.fas.fa-times').addEventListener('click', function () {
 //     document.querySelector('nav ul').classList.remove('show');
 // });
+
+
+
+//CONTACTO GMAIL
+var form = document.getElementById("my-form");
+    
+async function handleSubmit(event) {
+  event.preventDefault();
+  // var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+        // status.innerHTML = "Thanks for your submission!";
+        let modalGmail = document.getElementById("modal__gmail");
+        let nombreEnvia = document.getElementById("nombre").value;
+        console.log(nombreEnvia);
+        modalGmail.style.display = "block";
+        document.body.style.overflow = 'hidden';
+        $('#agradecer').html('Gracias por su contacto '+ nombreEnvia + '💗');
+        form.reset();
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          // status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "Oops! There was a problem submitting your form"
+        }
+      })
+    }
+  }).catch(error => {
+    // status.innerHTML = "Oops! There was a problem submitting your form"
+  });
+}
+form.addEventListener("submit", handleSubmit);
+
+
+let modalGmail = document.getElementById("modal__gmail");
+let closeBtnGmail = document.querySelector(".close-btn-gmail");
+window.onclick = function(e){
+  if(e.target == modalGmail){
+    modalGmail.style.display = "none";
+     document.body.style.overflow = 'auto';
+    }
+}
+closeBtnGmail.onclick = function(){
+    modalGmail.style.display = "none";
+     document.body.style.overflow = 'auto';
+}
