@@ -334,12 +334,26 @@
                         </div>
                     </div>
                     <div class="contact-right">
-                        <form  action="https://formspree.io/f/mzblezdj" method="POST" id="my-form">
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="inputForm" required>
-                            <input type="email" name="email" id="email" placeholder="Mail" class="inputForm" required>
-                            <input type="text" name="asunto" id="asunto" placeholder="Asunto" class="inputForm" required>
-                            <textarea name="message" id="message" rows="6" placeholder="Mensaje" class="inputForm" required></textarea>
+                        <form class="contact__form"  action="https://formspree.io/f/mzblezdj" method="POST" id="my-form">
+                          <div class="input-container">
+                            <input type="text" name ="nombre" id="nombre" class="styled-input" />
+                            <label for="nombre" class="hidden-label">Nombre</label>
+                          </div> 
+                          <div class="input-container">
+                            <input type="email" name="email" id="email" class="styled-input" required>
+                            <label for="email" class="hidden-label">Email</label>
+                          </div> 
+                          <div class="input-container">
+                            <input type="text" name="asunto" id="asunto" class="styled-input" required>
+                            <label for="asunto" class="hidden-label">Asunto</label>
+                          </div> 
+                          <div class="input-container">
+                            <textarea name="message" id="message" rows="4" class="styled-input" required></textarea>
+                            <label for="message" class="hidden-label mensaje">Mensaje</label>
+                          </div>   
+                          <div class="contenedor_btn_form">
                             <button type="submit" class="btn btn3" value="enviar" id="btn__contact">Enviar</button>
+                          </div>                                              
                         </form>
                     </div>
                 <!-- </div> -->
@@ -347,7 +361,7 @@
           </section>
           <div class="modal-gmail" id="modal__gmail">
               <div class="modal-cont">
-                  <div>
+                  <div class="modal-header-gmail">
                     <span class="close-btn-gmail">&times;</span>
                     <p class="msj_enviado">Mensaje enviado con exito!</p>
                   </div>
@@ -361,15 +375,10 @@
                     <a href="https://github.com/colorodriguezf" class="footer__icon" ><i class="bx bxl-github"></i></a>
                   </div>
               </div>
-          </div>
-      
-
-
-      
+          </div>      
       <!-- <iframe src="https://colorodriguezf.github.io/ContadorTruco/" width="850"
       height="800">
-      </iframe> -->
-  
+      </iframe> --> 
 
       <!--===== FOOTER =====-->
       <footer class="footer" id="footer">

@@ -146,14 +146,6 @@ function openTab(tabName) {
     document.getElementById(tabName).classList.add('active-tab');
 }
 
-// document.querySelector('.fas.fa-bars').addEventListener('click', function () {
-//     document.querySelector('nav ul').classList.toggle('show');
-// });
-
-// document.querySelector('.fas.fa-times').addEventListener('click', function () {
-//     document.querySelector('nav ul').classList.remove('show');
-// });
-
 
 
 //CONTACTO GMAIL
@@ -161,7 +153,6 @@ var form = document.getElementById("my-form");
     
 async function handleSubmit(event) {
   event.preventDefault();
-  // var status = document.getElementById("my-form-status");
   var data = new FormData(event.target);
   fetch(event.target.action, {
     method: form.method,
@@ -173,11 +164,11 @@ async function handleSubmit(event) {
     if (response.ok) {
         // status.innerHTML = "Thanks for your submission!";
         let modalGmail = document.getElementById("modal__gmail");
+        console.log(modalGmail);
         let nombreEnvia = document.getElementById("nombre").value;
-        console.log(nombreEnvia);
-        modalGmail.style.display = "block";
+        modalGmail.style.display = "flex";
         document.body.style.overflow = 'hidden';
-        $('#agradecer').html('Gracias por su contacto '+ nombreEnvia);
+        $('#agradecer').html('Gracias por su contacto '+ nombreEnvia + ' 😃');
         form.reset();
     } else {
       response.json().then(data => {
@@ -192,9 +183,11 @@ async function handleSubmit(event) {
     // status.innerHTML = "Oops! There was a problem submitting your form"
   });
 }
+
 form.addEventListener("submit", handleSubmit);
 
 
+// Mostrar modal al enviar un mail
 let modalGmail = document.getElementById("modal__gmail");
 let closeBtnGmail = document.querySelector(".close-btn-gmail");
 window.onclick = function(e){
@@ -207,3 +200,18 @@ closeBtnGmail.onclick = function(){
     modalGmail.style.display = "none";
      document.body.style.overflow = 'auto';
 }
+
+
+
+// Agregar clase al label del form CONTACT cuando tiene contenido
+const inputs = document.querySelectorAll('.styled-input');
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    if (input.value.trim() !== '') {
+      input.classList.add('has-content');
+    } else {
+      input.classList.remove('has-content');
+    }
+  });
+});
