@@ -219,14 +219,24 @@ footer.dark .footer__icon {
 .nav__link:hover {
   position: relative;
 }
-
-.nav__link:hover::after {
+/* Hover navlink, sin el :not(.actived) si nos paramos en el nav seleccionado, hace un movimiento*/
+.nav__link:not(.actived):hover::after {
   position: absolute;
   content: '';
   width: 100%;
   height: 0.18rem;
   left: 0;
   top: 2rem;
+  background-color: var(--first-color);
+}
+/*Active menu via js*/
+.actived::after {
+  display: flex;
+  content: '';
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  margin-top: 5px;
   background-color: var(--first-color);
 }
 
@@ -263,15 +273,6 @@ footer.dark .footer__icon {
   cursor: pointer;
 }
 
-/*Active menu*/
-.actived::after {
-  content: '';
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
 
 /*=== Show menu ===*/
 .show {
