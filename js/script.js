@@ -177,7 +177,7 @@ async function handleSubmit(event) {
         console.log(nombreEnvia);
         modalGmail.style.display = "block";
         document.body.style.overflow = 'hidden';
-        $('#agradecer').html('Gracias por su contacto '+ nombreEnvia + '💗');
+        $('#agradecer').html('Gracias por su contacto '+ nombreEnvia);
         form.reset();
     } else {
       response.json().then(data => {
