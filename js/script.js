@@ -7,10 +7,16 @@ $(document).ready(function() {
 const showMenu = (toggleId, navId) =>{
   const toggle = document.getElementById(toggleId),
   nav = document.getElementById(navId);
+  const scrollY = window.pageYOffset
+
 
   if(toggle && nav){
       toggle.addEventListener('click', ()=>{
+        $('#social-bar').removeClass('social-bar').addClass('social-bar__hidden');
           nav.classList.toggle('show');
+        if(!document.querySelector("#nav-menu.show") && scrollY > 450) {
+          $('#social-bar').removeClass('social-bar__hidden').addClass('social-bar');
+        }
       })
   }
 }
@@ -30,7 +36,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
-  const scrollY = window.pageYOffset
+  const scrollY = window.pageYOffset;
 
   sections.forEach(current =>{
       const sectionHeight = current.offsetHeight
