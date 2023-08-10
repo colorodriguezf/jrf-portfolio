@@ -915,6 +915,7 @@ form textarea {
   color: #262626;
   font-size: 18px;
   border-radius: 6px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .modal-gmail {
@@ -1072,7 +1073,7 @@ nav .fas {
   font-weight: var(--font-semi);
   padding: 2rem 0;
   margin-top: 20vh;
-  box-shadow: 0px 0px 100px rgba(157, 157, 157, 0.1);}
+  box-shadow: 0px 0px 100vh rgba(157, 157, 157, 0.1);}
 
 .footer__title {
   font-size: 2rem;
