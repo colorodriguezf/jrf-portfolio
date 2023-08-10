@@ -1090,6 +1090,12 @@ nav .fas {
   margin: 0 var(--mb-2);
 }
 
+.footer__icon:hover i{
+  color: #ff004f !important;
+  transform: scale(1.2);
+  transition: color 0.5s, transform 0.5s;
+}
+
 .footer__copy {
   font-size: var(--smaller-font-size);
 }
