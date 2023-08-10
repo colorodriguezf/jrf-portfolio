@@ -213,7 +213,8 @@ footer.dark .footer__icon {
 
 .nav__link {
   position: relative;
-  color: black;
+  color: white;
+  background: none !important;
 }
 
 .nav__link:hover {
@@ -282,13 +283,12 @@ footer.dark .footer__icon {
 /*===== HOME =====*/
 .home {
   position: relative;
-  /* row-gap: 5rem; */
   padding: 4rem 0 5rem;
   height: 100vh;
 }
 
 .home__data {
-    width: 50%;
+  width: 50%;
   align-self: center;
 }
 
