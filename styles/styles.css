@@ -121,6 +121,7 @@ footer.dark .footer__icon {
   margin-top: var(--mb-6);
   margin-bottom: var(--mb-4);
   text-align: center;
+  font-weight: 600;
 }
 
 .section-title::after {
@@ -330,7 +331,7 @@ footer.dark .footer__icon {
 	position: fixed;
 	right: 0;
 	top: 45%;
-  font-size: 1rem;   
+  font-size: .9rem;   
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -1190,7 +1191,10 @@ nav .fas {
     bottom: 20%;
   }
   .section{
-    height: 80vh;
+    height: 95vh;
+  }
+  .work {
+    margin-top: 10vh;
   }
   /* .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -1215,7 +1219,7 @@ nav .fas {
     flex-direction: column;
   }
   .container {
-    margin-top: 30vh;
+    /* margin-top: 10vh; */
   }
  
   .skills-order {
@@ -1327,6 +1331,10 @@ nav .fas {
     height: 50px;
     padding-top: 10px;
   }
+  .container-layer-a a:hover {
+    transform: scale(1.2);
+    font-weight: bolder;
+  }
   .social-bar {
     font-size:1.5rem;
   }
@@ -1365,7 +1373,7 @@ nav .fas {
     padding-top: 10px;
   }
   .social-bar {
-    font-size:1.6rem;
+    font-size:1.3rem;
   }
   .sub-title::after {
     margin: 10px;
@@ -1395,6 +1403,9 @@ nav .fas {
     }
     .section {
       height: 100vh;
+    }
+    .work {
+      margin-top: 0vh;
     }
     .skills-order {
       grid-template-columns: repeat(5, 1fr);
@@ -1449,17 +1460,24 @@ nav .fas {
     margin-bottom: 30px;
 }
 
-.layer a {
-    margin-top: 30px;
-    color: #080808;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
+.container-layer-a {
+  display: flex;
+  gap: 20px;
+}
+
+.container-layer-a a {
+  display: flex;
+  margin-top: 30px;
+  color: #080808;
+  text-decoration: none;
+  font-size: 20px;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.5s, transform 0.5s;
 }
 
 .work:hover img {
