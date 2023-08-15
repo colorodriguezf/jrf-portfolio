@@ -1360,14 +1360,14 @@ nav .fas {
   }
 }
 
-/* Monitor 24 pulgadas */
+/* Monitor  >= 22  pulgadas */
 @media screen and (min-width: 1400px) {
-  :root {
-  --normal-font-size: 1.2rem;
-  }
-  body {
-    font-size: var(--normal-font-size)!important;
-  }
+    :root {
+    --normal-font-size: 1.2rem;
+    }
+    body {
+      font-size: var(--normal-font-size)!important;
+    }
     .bd-grid {
       margin-left: auto;
       margin-right: auto;
