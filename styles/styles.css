@@ -1204,12 +1204,6 @@ nav .fas {
   .work {
     margin-top: 10vh;
   }
-  /* .about__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    text-align: initial;
-    margin-top: 6rem;
-  } */
   .skills__container {
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
@@ -1222,7 +1216,6 @@ nav .fas {
     display: flex;
     flex-direction: column;
   }
-
  
   .skills-order {
     grid-template-columns: repeat(5, 1fr);
@@ -1260,6 +1253,9 @@ nav .fas {
   .modal-cont {
     height: 22vh;
     font-size: 16px;
+  }
+  .footer {
+    margin-top:0;
   }
 }
 
@@ -1411,7 +1407,7 @@ nav .fas {
       width: 50%;
     }
     .container {
-      margin-top: 15vh;
+      margin-top: 10vh;
     }
     .container-skills {
       margin-top: 4rem;
@@ -1433,6 +1429,10 @@ nav .fas {
     .modal-cont {
       width: 25%;  
       font-size: 18px;
+    }
+
+    .footer {
+      margin-top: 0vh;
     }
 
   }
