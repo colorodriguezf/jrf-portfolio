@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  modoOscuro(); // al cargar activamos el modo oscuro para que ya inicio oscuro. En caso de querer iniciar
+  //modoOscuro(); // al cargar activamos el modo oscuro para que ya inicio oscuro. En caso de querer iniciar
                 // claro, comentar llamado a funcion modoOscuro();
 });
 
