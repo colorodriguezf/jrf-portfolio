@@ -8,7 +8,7 @@
   border-radius:100%;
   opacity:0;
   border:5px solid rgb(221, 41, 41);
-  animation:anim 3s infinite linear;
+  animation:anim 3s  linear;
 }
 
 .by__loader {
