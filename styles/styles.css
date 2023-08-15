@@ -757,13 +757,13 @@ width: 100%;
   overflow: hidden;
 }
 
-.work__img img {
+/* .work__img img {
   transition: 1s;
-}
+} */
 
-.work__img img:hover {
+/* .work__img img:hover {
   transform: scale(1.1);
-}
+} */
 
 /* Slider */
 
@@ -789,6 +789,12 @@ width: 100%;
 }
 .slick-slide {
   margin: 0 10px;
+}
+.slick-dots li button:before {
+  color: rgb(208, 45, 45) !important;
+}
+.slick-dots li.slick-active button:before {
+  color: red !important;
 }
 /* ----------------------- */
 /* ---------------------------------- *
@@ -1454,10 +1460,6 @@ nav .fas {
   align-items: center;
   justify-content: center;
   transition: color 0.5s, transform 0.5s;
-}
-
-.work:hover img {
-    transform: scale(1.1);
 }
 
 .carousel-item:hover .layer {
