@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     contenedorIndex.classList.remove("contenido");
     contenedorIndex.classList.add("contenido__visible");
      loader.style.display = 'none';
-    //  contenedorIndex.style.display = "block";
+     contenedorIndex.style.display = "block";
      lmain.style.display = "block";    
   }, 4000);
   });
