@@ -139,7 +139,7 @@ footer.dark .footer__icon {
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /*===== LAYOUT =====*/
@@ -742,65 +742,82 @@ width: 100%;
 
 /* ===== WORK =====*/
 
-/* Slider */
-
-.slider {
+.works-content {
+  display: grid;
   width: 80%;
-  position: relative;
-  left: 0;
-  right: 0;
   margin: auto;
-  margin-top: 10vh;
+  /* grid-template-columns: repeat(auto-fit, minmax(350px, auto)); */
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
 }
-.slick-prev, .slick-next {
-  z-index: 2;
+.work-content img {
+  height: auto;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
 }
-.slick-prev {
-  left:25px;
+.work-content {
+  position: relative;
+  overflow: hidden;
+  padding:20px;
+  /* background: #12141c; */
+  background: rgba(239, 239, 239, 0.656);
+  border-radius: 0.5rem;
+  transition: all .40s ease-out;
 }
-.slick-next {
-  right:25px;
+.work-content h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.work-content h6 {
+  color: var(--first-color);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.main-row {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.row-icon i {
+  font-size: 21px;
 }
 
-.slick-prev:before, .slick-next:before {
-  font-size:30px;
-}
-.slick-slide {
-  margin: 0 10px;
-}
-.slick-slider img {
-  border-radius: 5px;
-}
-.slick-dots li button:before {
-  color: rgb(208, 45, 45) !important;
-}
-.slick-dots li.slick-active button:before {
-  color: red !important;
-}
 /* Layer (descripcion works) */
+
 .layer {
-  width: 100%;
-  height: 0;
-  background: #ff004f;
-  border-radius: 5px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0 40px;
+  height: 100%;
+  border-radius: 0.5rem;
   font-size: 16px;
   transition: height 0.5s;
 }
 
-.layer h2 {
-  margin-bottom: 30px;
+.layer-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(255, 167, 167, 0.7); */
+  color: white;
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
-
+.work-content:hover .layer {
+  height: 100%;
+}
 .container-layer-a {
 display: flex;
 gap: 20px;
@@ -819,12 +836,32 @@ border-radius: 50%;
 align-items: center;
 justify-content: center;
 transition: color 0.5s, transform 0.5s;
-}
+} 
 
-.carousel-item:hover .layer {
+.work-content:hover .layer-overlay {
   height: 100%;
 }
-/* ----------------------- */
+
+.main-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.row-text h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.row-icon i {
+  font-size: 24px;
+}
+
+.work-content.dark {
+  background:rgb(34 34 34 / 66%);
+}
+
 /* ---------------------------------- *
 
 
@@ -927,6 +964,9 @@ form textarea {
   font-size: 18px;
   border-radius: 6px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+}
+input:focus, textarea:focus {
+  background-image: linear-gradient(to right, rgb(255, 249, 249), rgb(253, 244, 244), rgb(255, 244, 244)); /* Degradado de colores */
 }
 
 .modal-gmail {
@@ -1043,7 +1083,8 @@ form textarea {
   font-size: 12px;
   background:none;
 }
-.styled-input.has-content + .hidden-label {
+.styled-input.has-content + .hidden-label { 
+  /* si el input tiene contenido, el label no vuelve a su lugar */
   transform: translateY(-150%) scale(1.1); 
   font-size: 12px;
   background:none;
@@ -1120,7 +1161,7 @@ nav .fas {
     width: 100%;
   }
   .about, .contact {
-    height: 130vh;
+    min-height: 130vh;
   }
  
   .container-skills {
@@ -1201,7 +1242,7 @@ nav .fas {
     bottom: 20%;
   }
   .section{
-    height: 95vh;
+    min-height: 95vh;
   }
   .work {
     margin-top: 10vh;
@@ -1270,6 +1311,7 @@ nav .fas {
   .section {
     padding-top: 4rem;
     padding-bottom: 3rem;
+    margin-top: 0;
   }
   .section-title {
     margin-bottom: var(--mb-6);
@@ -1399,7 +1441,7 @@ nav .fas {
       margin-bottom: 110px;
     }
     .section {
-      height: 100vh;
+      min-height: 100vh;
     }
     .work {
       margin-top: 5vh;
