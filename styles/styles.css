@@ -233,7 +233,6 @@ footer.dark .footer__icon {
 }
 /*Active menu via js*/
 .actived::after {
-  display: flex;
   content: '';
   width: 100%;
   height: 0.18rem;
