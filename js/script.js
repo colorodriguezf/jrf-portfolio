@@ -228,3 +228,43 @@ inputs.forEach(input => {
     }
   });
 });
+
+
+
+
+// Obtén todos los botones de corazón y contadores
+document.addEventListener('DOMContentLoaded', function() {
+  const workContents = document.querySelectorAll('.work-content');
+
+  workContents.forEach((workContent, index) => {
+    const corazon = workContent.querySelector('.corazon');
+    const contador = workContent.querySelector('.contador');
+
+    let likes = parseInt(localStorage.getItem(`likes_${index}`)) || 0;
+
+    if (localStorage.getItem(`liked_${index}`)) {
+      corazon.classList.add('liked');
+    }
+
+    contador.textContent = likes;
+
+    corazon.addEventListener('click', () => {
+      if (!corazon.classList.contains('bxs-heart')) {
+        corazon.classList.remove('bx-heart');
+        corazon.classList.add('bxs-heart');
+        likes++;
+        localStorage.setItem(`liked_${index}`, 'true');
+      } else {
+        corazon.classList.remove('bxs-heart');
+        corazon.classList.add('bx-heart');
+        likes--;
+        localStorage.removeItem(`liked_${index}`);
+      }
+
+      contador.textContent = likes;
+      localStorage.setItem(`liked_${index}`, 'true');
+      localStorage.setItem(`likes_${index}`, likes.toString());
+    });
+  });
+});
+
