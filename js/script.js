@@ -87,7 +87,7 @@ sr.reveal('.about__text',{delay:400})
 sr.reveal('.card',{interval:100})
 sr.reveal('.work',{interval:200})
 sr.reveal('.container',{interval:200})
-
+sr.reveal('.work-content', {interval:200})
 
 sr.reveal('.work__img',{interval:200})
 
