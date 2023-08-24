@@ -646,34 +646,34 @@ width: 100%;
 
 .works-content {
   display: grid;
-  width: 80%;
+  width: 100%;
   margin: auto;
   /* grid-template-columns: repeat(auto-fit, minmax(350px, auto)); */
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 2rem;
 }
 .work-content img {
   height: 100%;
   width: 100%;
-  border-radius: 0.5rem;
   margin-bottom: 0.5rem;
 }
 .work-content {
   position: relative;
   overflow: hidden;
-  padding:14px;
+  /* padding:14px; */
   /* background: #12141c; */
   background: rgba(239, 239, 239, 0.656);
-  border-radius: 0.5rem;
   transition: all .40s ease-out;
   height: -webkit-fill-available;
-  padding-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 .work-content h3 {
   font-size: 18px;
   font-weight: 700;
+  padding-left: 14px;
 }
 .work-content h6 {
   color: var(--first-color);
@@ -686,6 +686,7 @@ width: 100%;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  padding-left: 14px;
 }
 .row-icon {
   display: flex;
@@ -756,7 +757,7 @@ width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-.work-content:hover .layer {
+.hoverable-image-container:hover .layer {
   height: 100%;
 }
 .container-layer-a {
@@ -779,7 +780,7 @@ justify-content: center;
 transition: color 0.5s, transform 0.5s;
 } 
 
-.work-content:hover .layer-overlay {
+.hoverable-image-container:hover .layer-overlay {
   height: 100%;
 }
 
@@ -788,6 +789,7 @@ transition: color 0.5s, transform 0.5s;
   justify-content: space-between;
   margin-top: 10px;
   align-items: center;
+  margin-left:0;
 }
 
 .row-text h6 {
@@ -1225,6 +1227,15 @@ nav .fas {
   .social-bar {
     font-size:1.3rem;
   }
+  .works-content {
+    width: 85%;
+    gap:1rem;
+    padding-bottom: 1rem;
+  }
+  .work-content {
+    padding:14px;
+    border-radius: 0.5rem;
+  }
   .container {
     display: flex;
     flex-direction: row;
@@ -1333,6 +1344,7 @@ nav .fas {
   }
 
   .works-content {
+    width: 80%;
     grid-template-columns: repeat(2, 1fr);
   }
   .work-content {
@@ -1340,6 +1352,7 @@ nav .fas {
   }
   .work-content h3 {
     font-size: 20px;
+    margin-left: 0;
   }
   .work-content h6 {
     font-size: 16px;
@@ -1383,6 +1396,11 @@ nav .fas {
   }
   .modal-cont {
     width: 40%;
+  }
+
+  .works-content {
+    width: 90%;
+    gap: 2rem;
   }
 }
 
@@ -1439,11 +1457,14 @@ nav .fas {
     }
 
     .works-content {
+      width: 80%;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
+      /* padding-bottom:; */
     }
     .work-content {
       padding:20px;
+      padding-bottom: 1.5rem;
     }
     .work-content h3 {
       font-size: 22px;
