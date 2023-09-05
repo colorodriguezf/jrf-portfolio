@@ -1457,7 +1457,7 @@ nav .fas {
     }
 
     .works-content {
-      width: 80%;
+      width: 88%;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       /* padding-bottom:; */
