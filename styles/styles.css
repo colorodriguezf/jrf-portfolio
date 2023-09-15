@@ -662,11 +662,11 @@ width: 100%;
 .work-content {
   position: relative;
   overflow: hidden;
+  margin: auto;
   /* padding:14px; */
   /* background: #12141c; */
   background: rgba(239, 239, 239, 0.656);
   transition: all .40s ease-out;
-  height: -webkit-fill-available;
   padding-bottom: 1rem;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -691,6 +691,7 @@ width: 100%;
 .row-icon {
   display: flex;
   gap: 10px;
+  padding-right: 10px;
 }
 .row-icon i {
   font-size: 21px;

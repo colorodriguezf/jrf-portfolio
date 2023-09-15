@@ -4,10 +4,10 @@ $(document).ready(function() {
 });
 
 /*===== MOSTRAR MENU =====*/ 
-const showMenu = (toggleId, navId) =>{
-  const toggle = document.getElementById(toggleId),
+let showMenu = (toggleId, navId) =>{
+  let toggle = document.getElementById(toggleId),
   nav = document.getElementById(navId);
-  const scrollY = window.pageYOffset
+  let scrollY = window.pageYOffset
 
 
   if(toggle && nav){
@@ -24,23 +24,23 @@ showMenu('nav-toggle','nav-menu');
 
 
 /*==================== QUITAR MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link');
+let navLink = document.querySelectorAll('.nav__link');
 
 function linkAction(){
-  const navMenu = document.getElementById('nav-menu');
+  let navMenu = document.getElementById('nav-menu');
   navMenu.classList.remove('show');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*==================== LINK ACTIVO AL SCROLLEAR ====================*/
-const sections = document.querySelectorAll('section[id]')
+let sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
-  const scrollY = window.pageYOffset;
+  let scrollY = window.pageYOffset;
 
   sections.forEach(current =>{
-      const sectionHeight = current.offsetHeight
-      const sectionTop = current.offsetTop - 50;
+    let sectionHeight = current.offsetHeight
+    let sectionTop = current.offsetTop - 50;
       sectionId = current.getAttribute('id')
 
       if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
@@ -107,7 +107,7 @@ setTimeout(() => {
 
 
 //Boton MODO OSCURO
-const switchButton = document.getElementById('switch');
+let switchButton = document.getElementById('switch');
 switchButton.addEventListener('click', modoOscuro);
  
 function modoOscuro() {
@@ -217,7 +217,7 @@ closeBtnGmail.onclick = function(){
 
 
 // Agregar clase al label del form CONTACT cuando tiene contenido
-const inputs = document.querySelectorAll('.styled-input');
+let inputs = document.querySelectorAll('.styled-input');
 
 inputs.forEach(input => {
   input.addEventListener('input', () => {
@@ -234,11 +234,11 @@ inputs.forEach(input => {
 
 // Obtén todos los botones de corazón y contadores
 document.addEventListener('DOMContentLoaded', function() {
-  const workContents = document.querySelectorAll('.work-content');
+  let workContents = document.querySelectorAll('.work-content');
 
   workContents.forEach((workContent, index) => {
-    const corazon = workContent.querySelector('.corazon');
-    const contador = workContent.querySelector('.contador');
+    let corazon = workContent.querySelector('.corazon');
+    let contador = workContent.querySelector('.contador');
 
     let likes = parseInt(localStorage.getItem(`likes_${index}`)) || 0;
 
@@ -267,3 +267,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+// Effecto youtube mobile
+function isElementInViewport(el) {
+  let rect = el.getBoundingClientRect();
+  let windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  return (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2);
+}
+
+function handleResizeAndScroll() {
+  let workContentElements = document.querySelectorAll('.work-content');
+  let screenWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  if (screenWidth <= 768) {
+    workContentElements.forEach((element) => {
+      if (isElementInViewport(element)) {
+        element.style.width = '99%';
+      } else {
+        element.style.width = '90%';
+      }
+    });
+  } else {
+    workContentElements.forEach((element) => {
+      element.style.width = '90%';
+    });
+  }
+}
+
+window.addEventListener('load', handleResizeAndScroll);
+window.addEventListener('resize', handleResizeAndScroll);
+window.addEventListener('scroll', handleResizeAndScroll);
+
+
