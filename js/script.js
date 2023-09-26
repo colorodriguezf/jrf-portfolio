@@ -87,9 +87,9 @@ sr.reveal('.about__text',{delay:400})
 sr.reveal('.card',{interval:100})
 sr.reveal('.work',{interval:200})
 sr.reveal('.container',{interval:200})
-sr.reveal('.work-content', {interval:200})
+// sr.reveal('.work-content', {interval:200})
 
-sr.reveal('.work__img',{interval:200})
+// sr.reveal('.work__img',{interval:200})
 
 
 //animacion tipado
@@ -240,13 +240,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let corazon = workContent.querySelector('.corazon');
     let contador = workContent.querySelector('.contador');
 
-    let likes = parseInt(localStorage.getItem(`likes_${index}`)) || 0;
+    // let likes = parseInt(localStorage.getItem(`likes_${index}`)) || 0;
 
     if (localStorage.getItem(`liked_${index}`)) {
       corazon.classList.add('liked');
     }
 
-    contador.textContent = likes;
+    // contador.textContent = likes; //no tengo bbdd
 
     corazon.addEventListener('click', () => {
       if (!corazon.classList.contains('bxs-heart')) {
@@ -261,15 +261,15 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.removeItem(`liked_${index}`);
       }
 
-      contador.textContent = likes;
+      // contador.textContent = likes;
       localStorage.setItem(`liked_${index}`, 'true');
-      localStorage.setItem(`likes_${index}`, likes.toString());
+      // localStorage.setItem(`likes_${index}`, likes.toString());
     });
   });
 });
 
 
-// Effecto youtube mobile
+// Efecto youtube mobile
 function isElementInViewport(el) {
   let rect = el.getBoundingClientRect();
   let windowHeight = (window.innerHeight || document.documentElement.clientHeight);

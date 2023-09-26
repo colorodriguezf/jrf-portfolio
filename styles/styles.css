@@ -693,6 +693,10 @@ width: 100%;
   gap: 10px;
   padding-right: 10px;
 }
+.contador {
+  /* hasta no tener ddbb no puedo poner cantidad de likes */
+  display: none; 
+}
 .row-icon i {
   font-size: 21px;
 }
