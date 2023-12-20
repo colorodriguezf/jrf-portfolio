@@ -37,17 +37,17 @@ let sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
   let scrollY = window.pageYOffset;
-
+  
   sections.forEach(current =>{
     let sectionHeight = current.offsetHeight
-    let sectionTop = current.offsetTop - 50;
-      sectionId = current.getAttribute('id')
+    let sectionTop = current.offsetTop - 70;
+    sectionId = current.getAttribute('id')
 
-      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('actived');
-      }else{
-          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('actived');
-      }
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('actived');
+  } else {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('actived');
+  }
   });
   if(this.scrollY > 450) {
     $('#home__social').removeClass('home__social').addClass('home__social__hidden');
