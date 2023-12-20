@@ -1407,6 +1407,7 @@ nav .fas {
     width: 90%;
     gap: 2rem;
   }
+  
 }
 
 /* Monitor  >= 22  pulgadas */
@@ -1430,7 +1431,7 @@ nav .fas {
       min-height: 100vh;
     }
     .work {
-      margin-top: 5vh;
+      /* margin-top: 5vh; */
     }
     .skills-order {
       grid-template-columns: repeat(5, 1fr);
