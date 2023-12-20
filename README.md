@@ -10,38 +10,29 @@ Este es mi portfolio personal, desarrollado con HTML, CSS y JavaScript.
 - [About](#about)
 - [Works](#works)
 - [Contact](#contact)
+- [Footer](#footer)
 
 ## Imágenes del sitio
 
 ### Home
 
-**Modo Claro**
-![Home Light](img/portfolio-light.png)
-
-**Modo Oscuro**
-![Home Dark](img/portfolio-dark.png)
+<img src="img/portfolio-light.png" alt="Home Light" width="45%"> <img src="img/portfolio-dark.png" alt="Home Light" width="45%">
 
 ### About
 
-**Modo Claro**
-![About Light](img/about-light.png)
-
-**Modo Oscuro**
-![About Dark](img/about-dark.png)
+<img src="img/about-light.png" alt="About Light" width="45%"> <img src="img/about-dark.png" alt="About Dark" width="45%">
 
 ### Works
 
-**Modo Claro**
-![Works Light](img/work-light.png)
+<img src="img/work-light.png" alt="Work Light" width="45%"> <img src="img/work-dark.png" alt="Work Dark" width="45%">
 
-**Modo Oscuro**
-![Works Dark](img/work-dark.png)
 
 ### Contact
 
-**Modo Claro**
-![Contact Light](img/contact-light.png)
+<img src="img/contact-light.png" alt="Contact Light" width="45%"> <img src="img/contact-dark.png" alt="Contact Dark" width="45%">
 
-**Modo Oscuro**
-![Contact Dark](img/contact-dark.png)
+### Footer
+
+<img src="img/footer-light.png" alt="Footer Light" width="45%"> <img src="img/footer-dark.png" alt="Footer Dark" width="45%">
+
 
