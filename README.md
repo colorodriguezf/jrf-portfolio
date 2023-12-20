@@ -14,10 +14,10 @@ Bienvenido a mi portfolio personal, desarrollado con HTML, CSS y JavaScript.
 ### Home
 
 **Modo Claro**
-![Home Light](img/home-light.png)
+![Home Light](img/portfolio-light.png)
 
 **Modo Oscuro**
-![Home Dark](img/home-dark.png)
+![Home Dark](img/portfolio-dark.png)
 
 ### About
 
