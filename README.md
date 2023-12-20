@@ -36,3 +36,14 @@ Este es mi portfolio personal, desarrollado con ```HTML, CSS y JavaScript```.
 <img src="img/footer-light.png" alt="Footer Light" width="45%"> <img src="img/footer-dark.png" alt="Footer Dark" width="45%">
 
 
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si encontras algún problema o tenes mejoras, no dudes en escribirme.
+
+Servira para seguir mejorando mis conocimientos, y mi portfolio.
+
+# Si te gustó dale una :star: ¡Gracias!
+
+
+
+
