@@ -2,7 +2,7 @@
 
 ¡Hola! 👋 Soy Julian Rodriguez Farias, Martillero y Corredor Público, y programador web Full-stack.
 
-Este es mi portfolio personal, desarrollado con HTML, CSS y JavaScript.
+Este es mi portfolio personal, desarrollado con ```HTML, CSS y JavaScript```.
 
 ## Secciones
 
