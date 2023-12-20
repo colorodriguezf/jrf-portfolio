@@ -193,7 +193,7 @@ async function handleSubmit(event) {
       })
     }
   }).catch(error => {
-    // status.innerHTML = "Oops! There was a problem submitting your form"
+    console.error('Fetch Error:', error);
   });
 }
 
