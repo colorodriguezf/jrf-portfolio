@@ -67,29 +67,7 @@ $('.scroll-up-btn').click(function(){
 
 window.addEventListener('scroll', scrollActive);
 
-const sr = ScrollReveal({
-  origin: 'top',
-  distance: '80px',
-  duration: 1500,
-  delay: 200,
-   reset: true
-});
 
-sr.reveal('.home',{})
-sr.reveal('.button',{delay:200})
-sr.reveal('.home__img', {delay:100})
-sr.reveal('.home_social_icon', {delay:200 })
-
-sr.reveal('.about__img',{})
-sr.reveal('.section-title',{delay:200})
-sr.reveal('.about__text',{delay:400})
-
-sr.reveal('.card',{interval:100})
-sr.reveal('.work',{interval:200})
-sr.reveal('.container',{interval:200})
-// sr.reveal('.work-content', {interval:200})
-
-// sr.reveal('.work__img',{interval:200})
 
 
 //animacion tipado
