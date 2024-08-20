@@ -158,6 +158,39 @@ footer.dark .footer__icon {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
+
+/* ===== SCROLL BAR ==== */
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 10px !important;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(245, 134, 134, 0.798); /* Color de la barra de desplazamiento */
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #f06969; /* Color cuando se pasa el mouse por encima */
+}
+
+/* ===== PROGRES BAR ==== */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 3px;
+  background-color: var(--first-color);
+}
+
+
 /*===== NAV =====*/
 .nav {
   height: var(--header-height);
