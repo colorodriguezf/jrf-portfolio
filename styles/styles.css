@@ -1479,7 +1479,6 @@ nav .fas {
   }
 
   .icon-github {
-    background: black;
     font-size: 15px; /* tiene que tener 2cm menos que las otras redes para que quede bien simetrico */
   }
   
