@@ -105,6 +105,7 @@ function modoOscuro() {
   document.getElementById('nav__list').classList.toggle('dark');
   document.getElementById('home__social').classList.toggle('dark');
   document.getElementById('sub-title').classList.toggle('dark');
+  document.querySelector(".derechos").classList.toggle('dark');
 
   // let skills = document.querySelectorAll('.skills__name');
   // for(let i = 0; i < skills.length; i++) {

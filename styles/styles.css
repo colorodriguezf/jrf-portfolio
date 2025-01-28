@@ -88,6 +88,10 @@ body.dark, footer.dark, .l-header.dark, .nav__toggle.dark, .nav__list.dark .nav_
     background:  var(--bg-color-dark);
     color:white; 
 }
+.derechos.dark {
+  background:  var(--bg-color-dark);
+  color:white !important; 
+}
 .inputForm.dark {
   color: black;
   background: var(--bg-color-light)
@@ -398,7 +402,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .icon-github {
 	background: #292929;
-  font-size: 12px; /* tiene que tener 2cm menos que las otras redes para que quede bien simetrico */
+  font-size: 12.5px; /* tiene que tener 1.5cm menos que las otras redes para que quede bien simetrico */
 }
 
 .icon-linkedin {
