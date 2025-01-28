@@ -212,7 +212,7 @@ body::-webkit-scrollbar-thumb:hover {
 
  /* Efecto para el idioma seleccionado */
  .contenedor-idioma-color img.grayscale {
-  filter: grayscale(80%);
+  filter: grayscale(60%);
   transform: scale(0.7);
 }
 .contenedor-idioma-color img{
