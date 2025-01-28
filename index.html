@@ -46,30 +46,43 @@
           <div class="nav__menu" id="nav-menu">
             <ul class="nav__list" id="nav__list">
               <li class="nav__item">
-                <a href="#home" class="nav__link active">Home</a>
+                <a href="#home" class="nav__link active nav-home">Home</a>
               </li>
               <li class="nav__item">
-                <a href="#about" class="nav__link">About</a>
+                <a href="#about" class="nav__link nav-about">Sobre mí</a>
               </li>
               <li class="nav__item">
-                <a href="#freelance" class="nav__link">Freelance</a>
+                <a href="#freelance" class="nav__link nav-freelance">Freelance</a>
               </li>
               <li class="nav__item">
-                <a href="#work" class="nav__link">Work</a>
+                <a href="#work" class="nav__link nav-projects">Proyectos</a>
               </li>
               <li class="nav__item">
-                <a href="#contact" class="nav__link">Contact</a>
+                <a href="#contact" class="nav__link nav-contact">Contacto</a>
               </li>
             </ul>
           </div>
 
+          <div class="contenedor-idioma-color">
+            <div style="display: flex; align-items: center; gap:8px;">
+              <a style="cursor: pointer">
+                <img id="spanish" src="img/banderas/es.webp" alt="Español" style="width: 30px; height: 20px; border-radius:3px">
+              </a>
+              |
+              <a style="cursor: pointer">
+                <img id="english" src="img/banderas/eeuu.webp" alt="English" style="width: 30px; height: 20px; border-radius:3px">
+              </a>
+            </div>
+  
+            <div class="form-check form-switch">
+              <button id="switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+              </button>
+            </div>
+          </div>
+
           <div class="nav__toggle" id="nav-toggle">
             <i class="bx bx-menu"></i>
-          </div>
-          <div class="form-check form-switch">
-            <button id="switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-            </button>
           </div>
         </nav>
       </header>
@@ -79,12 +92,13 @@
         <section class="home bd-grid" id="home">
           <div class="home__data">
             <h1 class="home__title">
-              Hi,<br />I'am <span class="home__title-color">Julian</span><br />
-              Developer web<br />
+              <span class="home__greeting">Hola,</span><br />
+               <span class="home__soy">Soy</span> <span class="home__title-color">Julian</span><br />
+              <span class="home__profession">Developer web</span><br />
               <span class="typing home__title-color"></span>
             </h1>
 
-            <a href="pdf/CV_Rodriguez_Farias_Julian.pdf" class="button">Download CV</a>
+            <a href="pdf/CV_Rodriguez_Farias_Julian.pdf" class="button btn-cv">Descargar CV</a>
           </div>
 
           <div class="home__social" id="home__social">
@@ -140,7 +154,7 @@
 
         <!--===== ABOUT =====-->
         <section class="about section" id="about">
-          <h2 class="section-title">About</h2>
+          <h2 class="section-title">Sobre Mí</h2>
           <div id="">
             <div class="container">
                 <div class="row">
@@ -148,7 +162,7 @@
                         <img src="img/yo.jpg">
                     </div>
                     <div class="about-col-2 about__img">
-                        <p> Soy una persona colaborativa, comunicativa y siempre dispuesto a
+                      <p class="about__description"> Soy una persona colaborativa, comunicativa y siempre dispuesto a
                           aprender. Me gusta trabajar en equipo, aportar ideas y
                           soluciones creativas. Mi enfoque principal ha sido el desarrollo
                           de aplicaciones web, donde he trabajado con tecnologías como
@@ -157,9 +171,9 @@
                           capas de una aplicación, desde el front-end hasta el back-end.
                         </p>
                         <div class="tab-titles">
-                          <p class="tab-links active-link" onclick="openTab('education')">Education</p>
+                          <p class="tab-links active-link p_education" onclick="openTab('education')">Educación</p>
                           <p class="tab-links" onclick="openTab('skills')">Skills</p>
-                            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                            <p class="tab-links p_experience" onclick="openTab('experience')">Experiencia</p>
                         </div>
                         <div class="tab-contents active-tab" id="education">
                           <ul>
@@ -191,6 +205,7 @@
                                   </li>                              
                                     <li>PHP (MVC)</li>
                                     <li>Laravel (PHP)</li>
+                                    <li>Java (Spring Boot)</li>
                                     <li>MySql</li>
                                     <div>
                                       <li class="li-skills">
@@ -209,8 +224,9 @@
                         </div>
                         <div class="tab-contents" id="experience">
                             <ul>
-                                <li><span>Febrero-Mayo 2024</span><br>Practice Backend developer - Gaudium España</li>
-                                <li><span>2022-2023</span><br>Full stack developer - Lang Tencologia</li>
+                                <li><span>2024 - Actualidad</span></li> <br> Freelance diseño de paginas</li>
+                                <li><span>Febrero - Mayo 2024</span><br>Practicas Backend developer - Gaudium España</li>
+                                <li><span>2022 - 2023</span><br>Full stack developer - Lang Tencologia</li>
                             </ul>
                         </div>
                     </div>
@@ -239,21 +255,21 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Rediseño</h6>
+                  <h6 id="freelance-1-category">Rediseño</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>Home Estudio Chiesa</h3>
+              <h3 id="freelance-1-title">Home Estudio Chiesa</h3>
             </div>
           </div>
         </section>
 
         <!--===== WORK =====-->
         <section class="work section" id="work">
-          <h2 class="section-title">Work</h2>          
+          <h2 class="section-title" id="work-title">Projects</h2>          
 
           <div class="works-content">
 
@@ -272,14 +288,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Juego</h6>
+                  <h6 id="work-1-category">Juego</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>Juego de adivinar la palabra</h3>
+              <h3 id="work-1-title">Juego de adivinar la palabra</h3>
             </div>
 
             <div class="work-content">
@@ -297,14 +313,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Interfaz</h6>
+                  <h6 id="work-2-category">Interfaz</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>Clon de la interfaz de Spotify</h3>
+              <h3 id="work-2-title">Clon de la interfaz de Spotify</h3>
             </div>
 
             <div class="work-content">
@@ -322,14 +338,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Interfaz</h6>
+                  <h6 id="work-3-category">Interfaz</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>Clon de la interfaz de Netflix</h3>
+              <h3 id="work-3-title">Clon de la interfaz de Netflix</h3>
             </div>
 
             <div class="work-content">
@@ -347,14 +363,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Sorteos</h6>
+                  <h6 id="work-4-category">Sorteos</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>App de sorteos</h3>
+              <h3 id="work-4-title">App de sorteos</h3>
             </div>            
 
             <div class="work-content">
@@ -372,14 +388,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Anotador</h6>
+                  <h6 id="work-5-category">Anotador</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>Anotador de truco tradicional</h3>
+              <h3 id="work-5-title">Anotador de truco tradicional</h3>
             </div>
 
             <div class="work-content">
@@ -397,14 +413,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Piedra, Papel o Tijera</h6>
+                  <h6 id="work-6-category">Game</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>¡Elige una opcion y Derrota a la PC!</h3>
+              <h3 id="work-6-title">¡Piedra, Papel, o Tijera!</h3>
             </div>
 
             <div class="work-content">
@@ -422,14 +438,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Clima</h6>
+                  <h6 id="work-7-category">Clima</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>Ingresa tu ciudad</h3>
+              <h3 id="work-7-title">Ingresa tu ciudad</h3>
             </div>
 
             <div class="work-content">
@@ -447,14 +463,14 @@
               </div>
               <div class="main-row">
                 <div class="row-text">
-                  <h6>Juego</h6>
+                  <h6 id="work-8-category">Juego</h6>
                 </div>
                 <div class="row-icon">
                   <p class="contador">0</p>
                   <i class="bx bx-heart corazon"></i>
                 </div>
               </div>
-              <h3>Click Ball game, supera tu puntuacion!</h3>
+              <h3 id="work-8-title">Click Ball game, supera tu puntuacion!</h3>
             </div>
 
           </div>
@@ -466,7 +482,7 @@
             <div class="container">
                 <!-- <div class="con"> -->
                     <div class="contact-left">
-                        <h1 class="sub-title section-title" id="sub-title">Contact Me</h1>
+                        <h1 class="sub-title section-title contact-title" id="sub-title">Contacto</h1>
                         <p title="Gmail"><a href="mailto:julianrodriguezfarias@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a> julianrodriguezfarias@gmail.com</p>
                         <p title="Whatsapp"><a href="https://wa.me/542494018307" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> 🇦🇷(+54)2494018307</p>
                         <div class="social-icons">
@@ -530,7 +546,7 @@
             <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" class="footer__icon" target="_blank"><i class="bx bxl-linkedin"></i></a>
             <a href="https://github.com/colorodriguezf" class="footer__icon" target="_blank"><i class="bx bxl-github"></i></a>
         </div>
-        <p class="footer__copy">&#169;by <span>J</span>ulian<span>RF</span><span class="punto__logo">.</span>   All rigths reserved</p>
+        <p class="footer__copy">&#169;by <span>J</span>ulian<span>RF</span><span class="punto__logo">.</span> <span class="derechos">Todos los erechos reservados</span></p>
       </footer>
     </div>
   </body>
@@ -548,6 +564,7 @@
   <!--  -->
 
   <script src="js/script.js"></script>
+  <script src="js/traduccion.js"></script>
   <script src="js/loader.js"></script>
   <script src="js/slider.js"></script>
 

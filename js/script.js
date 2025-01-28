@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  //modoOscuro(); // al cargar activamos el modo oscuro para que ya inicio oscuro. En caso de querer iniciar
+  modoOscuro(); // al cargar activamos el modo oscuro para que ya inicio oscuro. En caso de querer iniciar
                 // claro, comentar llamado a funcion modoOscuro();
 });
 
@@ -40,30 +40,32 @@ function scrollActive(){
   
   sections.forEach(current =>{
     let sectionHeight = current.offsetHeight
-    let sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute('id')
+    let sectionTop = current.offsetTop - 40;
+    sectionId = current.getAttribute('id');
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('actived');
-  } else {
-      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('actived');
-  }
-  });
-  if(this.scrollY > 450) {
-    $('#home__social').removeClass('home__social').addClass('home__social__hidden');
-    $('#social-bar').removeClass('social-bar__hidden').addClass('social-bar');
-    $('.scroll-up-btn').addClass('show');
+    } else {
+        document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('actived');
+    }
 
+  });
+
+    if(this.scrollY > 450) {
+      $('#home__social').removeClass('home__social').addClass('home__social__hidden');
+      $('#social-bar').removeClass('social-bar__hidden').addClass('social-bar');
+      $('.scroll-up-btn').addClass('show');
     } else {
         $('#home__social').removeClass('home__social__hidden').addClass('home__social');
         $('#social-bar').removeClass('social-bar').addClass('social-bar__hidden');
         $('.scroll-up-btn').removeClass('show');
     }
+    
 
     // 
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
     document.getElementById("progressBar").style.width = scrolled + "%";
 }
 

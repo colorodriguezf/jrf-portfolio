@@ -155,7 +155,8 @@ footer.dark .footer__icon {
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  box-shadow: 0 2px 5px rgba(157, 172, 187, 0.15);
+  padding: 10px 0px;
 }
 
 
@@ -201,7 +202,22 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .nav__link {
     color: black;
-  }
+}
+
+.contenedor-idioma-color {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+ /* Efecto para el idioma seleccionado */
+ .contenedor-idioma-color img.grayscale {
+  filter: grayscale(80%);
+  transform: scale(0.8);
+}
+.contenedor-idioma-color img{
+  transition: transform 0.3s ease;
+}
 
 .scroll-up-btn {
     position: fixed;
@@ -305,6 +321,9 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
 
+.form-check.form-switch {
+  display: flex;
+}
 
 /*=== Show menu ===*/
 .show {
@@ -372,34 +391,37 @@ body::-webkit-scrollbar-thumb:hover {
 .icon2 {
 	color: white;
 	text-decoration: none;
-	padding: .7rem;
+	padding: .6rem;
 	display: flex;
 	transition: all .5s;
 }
 
 .icon-github {
 	background: black;
+  font-size: 12px; /* tiene que tener 2cm menos que las otras redes para que quede bien simetrico */
 }
 
 .icon-linkedin {
 	background: #0a66c2;
+  font-size: 14px;
 }
 
 .icon-instagram {
 	background: #c13584;
+  font-size: 14px;
 }
 
 .icon2:first-child {
-	border-radius: 1rem 0 0 0;
+	border-radius: 0.8rem 0 0 0;
 }
 
 .icon2:last-child {
-	border-radius: 0 0 0 1rem;
+	border-radius: 0 0 0 0.8rem;
 }
 
 .icon2:hover {
 	padding-right: 2rem;
-	border-radius: 1rem 0 0 1rem;
+	border-radius: 0.8rem 0 0 0.8rem;
 	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
   color:white;
 }
@@ -409,8 +431,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .p_icon {
   display: none;
-  font-size: 1.4rem;
-  margin-left: 15px;
+  font-size: 1.2rem;
+  margin-left: 12px;
 }
 /* ------------ */
 
@@ -646,10 +668,13 @@ width: 100%;
   display: flex;
   gap: 10px;
 }
-.tab-contents ul li span {
+.tab-contents ul li span, #experience li span, #education li span {
   color: #b54768;
   font-size: 16px;
   font-weight: bold;
+}
+#experience li, #education li {
+  list-style: none;
 }
 
 .tab-contents {
@@ -1111,7 +1136,7 @@ nav .fas {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
-  margin-top: 20vh;
+  margin-top: 10vh;
   box-shadow: 0px 0px 100vh rgba(157, 157, 157, 0.1);}
 
 .footer__title {
@@ -1137,6 +1162,13 @@ nav .fas {
 
 .footer__copy {
   font-size: var(--smaller-font-size);
+  margin-top: -3vh;
+}
+
+.footer__copy span.derechos {
+  color: var(--bg-color-dark);
+  font-size: var(--smaller-font-size);
+  font-weight: 600;
 }
 
 /* ===== MEDIA QUERIES=====*/
@@ -1332,13 +1364,16 @@ nav .fas {
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
+    justify-content: flex-start;
+    gap: 50px;
   }
+
   .nav__list {
     display: flex;
     padding-top: 0;
   }
   .nav__item {
-    margin-left: var(--mb-6);
+    margin-left: var(--mb-2);
     margin-bottom: 0;
   }
   .nav__toggle {
@@ -1348,6 +1383,16 @@ nav .fas {
     color: black;
     text-decoration: none;
   }
+
+  .contenedor-idioma-color {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    gap: 10px;
+    align-items: center;
+  }
+
+
   .home {
     padding: 8rem 0 2rem;
   }
@@ -1415,15 +1460,37 @@ nav .fas {
 }
 
 @media screen and (min-width: 992px) {
-  .bd-grid {
-    margin-left: auto;
-    margin-right: auto;
+  nav.nav.bd-grid {
+    /* margin-left: auto; */
+    justify-content: space-between;
   }
+  .nav__menu {
+    margin-right: 240px;
+  }
+  .nav__item {
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+}
   .home {
     padding: 10rem 0 2rem;
   }
   .home__img {
-    width: 550px;
+    width: 460px;
+  }
+
+  .icon-github {
+    background: black;
+    font-size: 15px; /* tiene que tener 2cm menos que las otras redes para que quede bien simetrico */
+  }
+  
+  .icon-linkedin {
+    background: #0a66c2;
+    font-size: 17px;
+  }
+  
+  .icon-instagram {
+    background: #c13584;
+    font-size: 17px;
   }
   
   .skills-order {
@@ -1469,10 +1536,21 @@ nav .fas {
       margin-left: auto;
       margin-right: auto;
     }
-    
+    .nav {
+      justify-content: space-between;
+      padding-right: 40px;
+    }
+    .nav__menu {
+      margin-right: 100px;
+    }
+    .contenedor-idioma-color {
+      right: 80px;
+      gap: 30px;
+    }
     .home__img {
-      width: 550px;
-      margin-bottom: 110px;
+      width: 480px;
+      margin-bottom: 140px;
+      margin-right: -50px;
     }
     .section {
       min-height: 100vh;
