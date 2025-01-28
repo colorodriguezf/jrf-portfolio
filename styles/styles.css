@@ -1483,7 +1483,7 @@ nav .fas {
   }
 
   .icon-github {
-    font-size: 15px; /* tiene que tener 2cm menos que las otras redes para que quede bien simetrico */
+    font-size: 15.5px; /* tiene que tener 1.5cm menos que las otras redes para que quede bien simetrico */
   }
   
   .icon-linkedin {
