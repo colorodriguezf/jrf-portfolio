@@ -221,6 +221,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .contenedor-idioma-color img{
   transition: transform 0.3s ease;
+  filter: brightness(1.2);
 }
 
 .scroll-up-btn {
