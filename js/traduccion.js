@@ -101,7 +101,7 @@ const translations = {
       `,
       education: [
         "<li> <span>2023 Testing Automation and Performance </span><br> QA - Egg Corporation </li>",
-        "<li> <span>2020 - ∞ Full Stack Developer Program</span><br>TUDAI (Programming) - UNICEN </li>",
+        "<li> <span>2021 - 2025 Full Stack Developer Program</span><br>TUDAI (Programming) - UNICEN </li>",
         "<li> <span>2020 - ∞ Udemy Courses </span><br>Developer - HTML, CSS, JS, SQL, JAVA </li>",
       ],
       skills: {
@@ -109,6 +109,7 @@ const translations = {
         back: ["PHP (MVC)", "Laravel (PHP)", "Java (Spring Boot)", "MySQL"],
         poo: ["Java"],
         versioning: ["Git"],
+        testing: ["QA", "TestNG", "JUnit 4 y 5"],
       },
       experience: [
         "<li><span>2024 - Present</span><br>Freelance page design</li>",
@@ -132,7 +133,7 @@ const translations = {
       `,
       education: [
         "<li><span>2023 Testing Automation y Performance </span><br>QA - Egg Corporation</li>",
-        "<li><span>2020 - ∞ Carrera Full stack developer </span><br>TUDAI (Programacion) - UNICEN</li>",
+        "<li><span>2021 - 2025 Carrera Full stack developer </span><br>TUDAI (Programacion) - UNICEN</li>",
         "<li><span>2020 - ∞ Cursos Udemy  </span><br>Developer - HTML, CSS, JS, SQL, JAVA</li>",
       ],
       skills: {
@@ -140,6 +141,7 @@ const translations = {
         back: ["PHP (MVC)", "Laravel (PHP)", "Java (Spring Boot)", "MySQL"],
         poo: ["Java"],
         versioning: ["Git"],
+        testing: ["QA", "TestNG", "JUnit 4 y 5"],
       },
       experience: [
         "<li><span>2024 - Actualidad</span><br>Freelance diseño de paginas</li>",
@@ -181,6 +183,8 @@ const translations = {
       <div>
         <li class="li-skills"><span>Sistema de control de versiones</span><br></li>
         ${data.skills.versioning.map(skill => `<li>${skill}</li>`).join("")}
+        <li class="li-skills"><span>Testing</span><br></li>
+        ${data.skills.testing.map(skill => `<li>${skill}</li>`).join("")}
       </div>
     `;
 
