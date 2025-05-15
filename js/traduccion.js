@@ -110,6 +110,7 @@ const translations = {
         poo: ["Java"],
         versioning: ["Git"],
         testing: ["QA", "TestNG", "JUnit 4 y 5"],
+        design: ["Figma"],
       },
       experience: [
         "<li><span>2024 - Present</span><br>Freelance page design</li>",
@@ -142,6 +143,7 @@ const translations = {
         poo: ["Java"],
         versioning: ["Git"],
         testing: ["QA", "TestNG", "JUnit 4 y 5"],
+        design: ["Figma"],
       },
       experience: [
         "<li><span>2024 - Actualidad</span><br>Freelance diseño de paginas</li>",
@@ -185,6 +187,8 @@ const translations = {
         ${data.skills.versioning.map(skill => `<li>${skill}</li>`).join("")}
         <li class="li-skills"><span>Testing</span><br></li>
         ${data.skills.testing.map(skill => `<li>${skill}</li>`).join("")}
+        <li class="li-skills"><span> Diseño UI/UX y Prototipado</span><br></li>
+        ${data.skills.design.map(skill => `<li>${skill}</li>`).join("")}
       </div>
     `;
 
