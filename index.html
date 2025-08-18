@@ -1,610 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Zen+Dots&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> <!--iconos footer -->
-    <!-- Slider -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <!--  -->
-    <link rel="icon" href="img/logoPagina.png	">
-    <link rel="stylesheet" href="styles/loader.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <title>Portfolio - JRF</title>
-  </head>
-  <body>
-    <div class="loader">
-      <div class="load"></div>
-      <div class="load"></div>
-      <div class="load"></div>
-      <div class="by__loader">
-        <div>by <span>J</span>ulian<span>RF</span><span class="punto__logo">.</span><span class="loader__corazon"></span></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Zen+Dots&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--iconos footer -->
+  <!-- Slider -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <!--  -->
+  <link rel="icon" href="img/logoPagina.png	">
+  <link rel="stylesheet" href="styles/loader.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <title>Portfolio - JRF</title>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="load"></div>
+    <div class="load"></div>
+    <div class="load"></div>
+    <div class="by__loader">
+      <div>by <span>J</span>ulian<span>RF</span><span class="punto__logo">.</span><span class="loader__corazon"></span>
       </div>
     </div>
+  </div>
 
-    <div class="contenido">
-      <div class="scroll-up-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-        </svg>
-      </div>
-      <header class="l-header" id="l-header">
-        <div id="progressBar"></div>
-        <nav class="nav bd-grid">
-          <div class="container__logo">
-            <a href="#" class="nav__logo" id="nav__logo"><span>J</span>ulian<span>RF</span><span class="punto__logo">.</span></a>
-          </div>
-
-          <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list" id="nav__list">
-              <li class="nav__item">
-                <a href="#home" class="nav__link active nav-home">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="#about" class="nav__link nav-about">Sobre mí</a>
-              </li>
-              <li class="nav__item">
-                <a href="#freelance" class="nav__link nav-freelance">Freelance</a>
-              </li>
-              <li class="nav__item">
-                <a href="#work" class="nav__link nav-projects">Proyectos</a>
-              </li>
-              <li class="nav__item">
-                <a href="#contact" class="nav__link nav-contact">Contacto</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="contenedor-idioma-color">
-            <div style="display: flex; align-items: center; gap:8px;">
-              <a style="cursor: pointer">
-                <img id="spanish" src="img/banderas/es.webp" alt="Español" style="width: 30px; height: 20px; border-radius:3px">
-              </a>
-              |
-              <a style="cursor: pointer">
-                <img id="english" src="img/banderas/eeuu.webp" alt="English" style="width: 30px; height: 20px; border-radius:3px">
-              </a>
-            </div>
-  
-            <div class="form-check form-switch">
-              <button id="switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-              </button>
-            </div>
-          </div>
-
-          <div class="nav__toggle" id="nav-toggle">
-            <i class="bx bx-menu"></i>
-          </div>
-        </nav>
-      </header>
-
-      <div class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-          <div class="home__data">
-            <h1 class="home__title">
-              <span class="home__greeting">Hola,</span><br />
-               <span class="home__soy">Soy</span> <span class="home__title-color">Julian</span><br />
-              <span class="home__profession">Developer web</span><br />
-              <span class="typing home__title-color"></span>
-            </h1>
-
-            <a href="pdf/CV_Rodriguez_Farias_Julian.pdf" class="button btn-cv">Descargar CV</a>
-          </div>
-
-          <div class="home__social" id="home__social">
-            <div class="icon instagram">
-              <div class="toolt">Instagram</div>
-              <a
-                href="https://www.instagram.com/colorodriguezf/" target="_blank">
-                <span class="span__icon"><i class="fab fa-instagram"></i></span>
-              </a>
-            </div>
-            <div class="icon linkedin">
-              <div class="toolt">LinkedIn</div>
-              <a
-                href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" target="_blank">
-                <span class="span__icon"><i class="fab fa-linkedin"></i></span>
-              </a>
-            </div>
-            <div class="icon github">
-              <div class="toolt">GitHub</div>
-              <a href="https://github.com/colorodriguezf" target="_blank">
-                <span class="span__icon"><i class="fab fa-github"></i></span>
-              </a>
-            </div>
-          </div>
-
-          <div class="home__img">
-            <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <mask id="mask0" mask-type="alpha">
-                <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-              </mask>
-              <g mask="url(#mask0)">
-                <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                <image class="home__blob-img" x="60" y="30" href="img/img-perfil-sin-fondo.png"/>
-              </g>
-            </svg>
-          </div>
-        </section>
-        <!-- Barra lateral -->
-        <div class="social-bar__hidden" id="social-bar">
-          <a href="https://www.instagram.com/colorodriguezf/" class="icon2 icon-instagram" target="_blank">
-            <i class="fab fa-instagram"></i>
-            <p class="p_icon">Instagram</p>
-          </a>
-          <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" class="icon2 icon-linkedin" target="_blank">
-            <i class="fab fa-linkedin"></i>
-            <p class="p_icon">LinedIn</p>
-          </a>
-          <a href="https://github.com/colorodriguezf" class="icon2 icon-github" target="_blank"><i class="fab fa-github"></i>
-            <p class="p_icon">GitHub</p>
-          </a>
+  <div class="contenido">
+    <div class="scroll-up-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+      </svg>
+    </div>
+    <header class="l-header" id="l-header">
+      <div id="progressBar"></div>
+      <nav class="nav bd-grid">
+        <div class="container__logo">
+          <a href="#" class="nav__logo" id="nav__logo"><span>J</span>ulian<span>RF</span><span
+              class="punto__logo">.</span></a>
         </div>
-        <!-- -------------------- -->
 
-        <!--===== ABOUT =====-->
-        <section class="about section" id="about">
-          <h2 class="section-title">Sobre Mí</h2>
-          <div id="">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1 about__img">
-                        <img src="img/yo.jpg">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list" id="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active nav-home">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link nav-about">Sobre mí</a>
+            </li>
+            <li class="nav__item">
+              <a href="#freelance" class="nav__link nav-freelance">Freelance</a>
+            </li>
+            <li class="nav__item">
+              <a href="#work" class="nav__link nav-projects">Proyectos</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link nav-contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contenedor-idioma-color">
+          <div style="display: flex; align-items: center; gap:8px;">
+            <a style="cursor: pointer">
+              <img id="spanish" src="img/banderas/es.webp" alt="Español"
+                style="width: 30px; height: 20px; border-radius:3px">
+            </a>
+            |
+            <a style="cursor: pointer">
+              <img id="english" src="img/banderas/eeuu.webp" alt="English"
+                style="width: 30px; height: 20px; border-radius:3px">
+            </a>
+          </div>
+
+          <div class="form-check form-switch">
+            <button id="switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+            </button>
+          </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <div class="l-main">
+      <!--===== HOME =====-->
+      <section class="home bd-grid" id="home">
+        <div class="home__data">
+          <h1 class="home__title">
+            <span class="home__greeting">Hola,</span><br />
+            <span class="home__soy">Soy</span> <span class="home__title-color">Julian</span><br />
+            <span class="home__profession">Developer web</span><br />
+            <span class="typing home__title-color"></span>
+          </h1>
+
+          <a href="pdf/CV_Rodriguez_Farias_Julian.pdf" class="button btn-cv">Descargar CV</a>
+        </div>
+
+        <div class="home__social" id="home__social">
+          <div class="icon instagram">
+            <div class="toolt">Instagram</div>
+            <a href="https://www.instagram.com/colorodriguezf/" target="_blank">
+              <span class="span__icon"><i class="fab fa-instagram"></i></span>
+            </a>
+          </div>
+          <div class="icon linkedin">
+            <div class="toolt">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" target="_blank">
+              <span class="span__icon"><i class="fab fa-linkedin"></i></span>
+            </a>
+          </div>
+          <div class="icon github">
+            <div class="toolt">GitHub</div>
+            <a href="https://github.com/colorodriguezf" target="_blank">
+              <span class="span__icon"><i class="fab fa-github"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="home__img">
+          <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <mask id="mask0" mask-type="alpha">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+            </mask>
+            <g mask="url(#mask0)">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+              <image class="home__blob-img" x="60" y="30" href="img/img-perfil-sin-fondo.png" />
+            </g>
+          </svg>
+        </div>
+      </section>
+      <!-- Barra lateral -->
+      <div class="social-bar__hidden" id="social-bar">
+        <a href="https://www.instagram.com/colorodriguezf/" class="icon2 icon-instagram" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <p class="p_icon">Instagram</p>
+        </a>
+        <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" class="icon2 icon-linkedin"
+          target="_blank">
+          <i class="fab fa-linkedin"></i>
+          <p class="p_icon">LinedIn</p>
+        </a>
+        <a href="https://github.com/colorodriguezf" class="icon2 icon-github" target="_blank"><i
+            class="fab fa-github"></i>
+          <p class="p_icon">GitHub</p>
+        </a>
+      </div>
+      <!-- -------------------- -->
+
+      <!--===== ABOUT =====-->
+      <section class="about section" id="about">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div id="">
+          <div class="container">
+            <div class="row">
+              <div class="about-col-1 about__img">
+                <img src="img/yo.jpg">
+              </div>
+              <div class="about-col-2 about__img">
+                <p class="about__description"> Soy una persona colaborativa, comunicativa y siempre dispuesto a
+                  aprender. Me gusta trabajar en equipo, aportar ideas y
+                  soluciones creativas. Mi enfoque principal ha sido el desarrollo
+                  de aplicaciones web, donde he trabajado con tecnologías como
+                  HTML, CSS, JavaScript, PHP y bases de datos MySQL. Me considero
+                  un desarrollador Full-Stack, capaz de trabajar en todas las
+                  capas de una aplicación, desde el front-end hasta el back-end.
+                </p>
+                <div class="tab-titles">
+                  <p class="tab-links active-link p_education" onclick="openTab('education')">Educación</p>
+                  <p class="tab-links" onclick="openTab('skills')">Skills</p>
+                  <p class="tab-links p_experience" onclick="openTab('experience')">Experiencia</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                  <ul>
+                    <li><span>2023 Testing Automation y Performance </span><br>QA - Egg Corporation</li>
+                    <li><span>2021 - 2025 Carrera Full stack developer </span><br>TUDAI (Programacion) - UNICEN</li>
+                    <li><span>2020 - ∞ Cursos Udemy </span><br>Developer - HTML, CSS, JS, SQL, JAVA</li>
+                  </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                  <ul class="ul-skills">
+                    <div>
+                      <li class="li-skills">
+                        <span>Front</span><br>
+                      </li>
+                      <li>Html</li>
+                      <li>Css</li>
+                      <li>JavaScript</li>
+                      <li>jQuery</li>
+                      <li>Angular</li>
+                      <li>Bootstrap</li>
+                      <li>Smarty</li>
+                      <li>VueJs</li>
+                      <li>Ajax</li>
+                      <li>Api Rest</li>
                     </div>
-                    <div class="about-col-2 about__img">
-                      <p class="about__description"> Soy una persona colaborativa, comunicativa y siempre dispuesto a
-                          aprender. Me gusta trabajar en equipo, aportar ideas y
-                          soluciones creativas. Mi enfoque principal ha sido el desarrollo
-                          de aplicaciones web, donde he trabajado con tecnologías como
-                          HTML, CSS, JavaScript, PHP y bases de datos MySQL. Me considero
-                          un desarrollador Full-Stack, capaz de trabajar en todas las
-                          capas de una aplicación, desde el front-end hasta el back-end.
-                        </p>
-                        <div class="tab-titles">
-                          <p class="tab-links active-link p_education" onclick="openTab('education')">Educación</p>
-                          <p class="tab-links" onclick="openTab('skills')">Skills</p>
-                            <p class="tab-links p_experience" onclick="openTab('experience')">Experiencia</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="education">
-                          <ul>
-                              <li><span>2023 Testing Automation y Performance </span><br>QA - Egg Corporation</li>
-                              <li><span>2021 - 2025 Carrera Full stack developer </span><br>TUDAI (Programacion) - UNICEN</li>
-                              <li><span>2020 - ∞ Cursos Udemy  </span><br>Developer - HTML, CSS, JS, SQL, JAVA</li>
-                          </ul>
+                    <div>
+                      <li class="li-skills">
+                        <span>Back</span><br>
+                      </li>
+                      <li>PHP (MVC)</li>
+                      <li>Laravel (PHP)</li>
+                      <li>Java (Spring Boot)</li>
+                      <li>MySql</li>
+                      <div>
+                        <li class="li-skills">
+                          <span>P.O.O (objetos)</span><br>
+                        </li>
+                        <li>Java</li>
                       </div>
-                        <div class="tab-contents" id="skills">                           
-                              <ul class="ul-skills">
-                                <div>
-                                  <li class="li-skills">
-                                    <span>Front</span><br>
-                                  </li>                              
-                                    <li>Html</li>
-                                    <li>Css</li>
-                                    <li>JavaScript</li>
-                                    <li>jQuery</li>
-                                    <li>Angular</li>
-                                    <li>Bootstrap</li>
-                                    <li>Smarty</li>
-                                    <li>VueJs</li>
-                                    <li>Ajax</li>
-                                    <li>Api Rest</li>
-                                </div>
-                                <div>
-                                  <li class="li-skills">
-                                    <span>Back</span><br>
-                                  </li>                              
-                                    <li>PHP (MVC)</li>
-                                    <li>Laravel (PHP)</li>
-                                    <li>Java (Spring Boot)</li>
-                                    <li>MySql</li>
-                                    <div>
-                                      <li class="li-skills">
-                                        <span>P.O.O (objetos)</span><br>
-                                      </li>                              
-                                        <li>Java</li>
-                                    </div>
-                                </div>
-                                <div>
-                                  <li class="li-skills">
-                                    <span>Sistema de control de versiones</span><br>
-                                  </li>                     
-                                    <li>Git</li>
-                                    <li class="li-skills">
-                                      <span>Testing</span><br>
-                                    </li>                     
-                                      <li>QA</li>
-                                      <li>TestNG</li>
-                                      <li>JUnit 4 y 5</li>
-                                      <li class="li-skills">
-                                        <span>Diseño UI/UX y Prototipado</span><br>
-                                      </li> 
-                                      <li>Figma</li>
-                                </div>
-                              </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2024 - Actualidad</span></li> <br> Freelance diseño de paginas</li>
-                                <li><span>Febrero - Mayo 2024</span><br>Practicas Backend developer - Gaudium España</li>
-                                <li><span>2022 - 2023</span><br>Full stack developer - Lang Tencologia</li>
-                            </ul>
-                        </div>
                     </div>
+                    <div>
+                      <li class="li-skills">
+                        <span>Sistema de control de versiones</span><br>
+                      </li>
+                      <li>Git</li>
+                      <li class="li-skills">
+                        <span>Testing</span><br>
+                      </li>
+                      <li>QA</li>
+                      <li>TestNG</li>
+                      <li>JUnit 4 y 5</li>
+                      <li class="li-skills">
+                        <span>Diseño UI/UX y Prototipado</span><br>
+                      </li>
+                      <li>Figma</li>
+                    </div>
+                  </ul>
                 </div>
-            </div>
-         </div>
-        </section>
-
-
-
-        <!--===== FREELANCE =====-->
-        <section class="freelance" id="freelance">
-          <h2 class="section-title">Freelance</h2> 
-          <div class="works-content">
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/freelance/freelance-estudiochiesa.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>estudiochiesa.com.ar</p>
-                    <div class="container-layer-a">
-                      <a href="http://estudiochiesa.com.ar/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                  </div>
+                <div class="tab-contents" id="experience">
+                  <ul>
+                    <li><span>2024 - Actualidad</span></li> <br> Freelance diseño de paginas</li>
+                    <li><span>Febrero - Mayo 2024</span><br>Practicas Backend developer - Gaudium España</li>
+                    <li><span>2022 - 2023</span><br>Full stack developer - Lang Tencologia</li>
+                  </ul>
                 </div>
               </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="freelance-1-category">Rediseño</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="freelance-1-title">Home Estudio Chiesa</h3>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-          <h2 class="section-title" id="work-title">Projects</h2>          
 
-          <div class="works-content">
 
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/trabajo_figma_musica.png" alt="App de música Spoiler Five Inc." class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>Diseño en Figma + Desarrollo web (HTML, CSS, JS)</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/final-interfaces/prototipo-funcional/index.html" target="_blank" title="Ver página"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://www.figma.com/design/1WNmIqtyuIkbZZ2PxnJshC/Final-Interfaces-2025---Spoiler-Five-Inc.?node-id=0-1&t=oDbJTQYNdvScnDIY-1" target="_blank" title="Ver diseño en Figma"><i class="fab fa-figma"></i></a>
-                      <a href="https://github.com/colorodriguezf/final-interfaces/tree/gh-pages" target="_blank" title="Ver código fuente"><i class="fab fa-github"></i></a>
-                    </div>
+      <!--===== FREELANCE =====-->
+      <section class="freelance" id="freelance">
+        <h2 class="section-title">Freelance</h2>
+        <div class="works-content">
+          <!-- Proyecto 1 -->
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/freelance/freelance-dfsestudio.png" alt="" class="hoverable-image" />
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>PHP laravel + Html, CSS, JS, Bootstrap + MySql</p>
+                  <p>dfsestudio.com.ar</p>
+                  <div class="container-layer-a">
+                    <a href="https://dfsestudio.com.ar" target="_blank" title="Ver página">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-
-              <div class="main-row">
-                <div class="row-text">
-                  <h6>App de Música</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-
-              <h3>Spoiler Five Inc.</h3>
             </div>
-
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/apalabrados.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS (jQuery)</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/apalabrados/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <!-- <a href="https://github.com/colorodriguezf/apalabrados" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a> -->
-                    </div>
-                  </div>
-                </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="freelance-1-category">Página web Full-stack</h6>
               </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-1-category">Juego</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
               </div>
-              <h3 id="work-1-title">Juego de adivinar la palabra</h3>
             </div>
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/spotify.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/clonSpotify/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://github.com/colorodriguezf/clonSpotify" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-2-category">Interfaz</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="work-2-title">Clon de la interfaz de Spotify</h3>
-            </div>
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/netflix.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/clonNetflix/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://github.com/colorodriguezf/clonNetflix" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-3-category">Interfaz</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="work-3-title">Clon de la interfaz de Netflix</h3>
-            </div>
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/sorteate.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/sorteate/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://github.com/colorodriguezf/sorteate" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-4-category">Sorteos</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="work-4-title">App de sorteos</h3>
-            </div>            
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/anotadorTruco.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS (POO)</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/ContadorTruco/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://github.com/colorodriguezf/ContadorTruco" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-5-category">Anotador</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="work-5-title">Anotador de truco tradicional</h3>
-            </div>
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/piedraPapelTijera.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/piedra_papel_tijera/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://github.com/colorodriguezf/piedra_papel_tijera" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-6-category">Game</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="work-6-title">¡Piedra, Papel, o Tijera!</h3>
-            </div>
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/climaApp.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io/clima/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://github.com/colorodriguezf/clima.git" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-7-category">Clima</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="work-7-title">Ingresa tu ciudad</h3>
-            </div>
-
-            <div class="work-content">
-              <div class="hoverable-image-container">
-                <img src="img/works/clickBall.png" alt="" class="hoverable-image">
-                <div class="layer-overlay">
-                  <div class="layer">
-                    <p>HTML, CSS y JS</p>
-                    <div class="container-layer-a">
-                      <a href="https://colorodriguezf.github.io//Click-ball/" target="_blank" title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
-                      <a href="https://github.com/colorodriguezf/Click-ball" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="main-row">
-                <div class="row-text">
-                  <h6 id="work-8-category">Juego</h6>
-                </div>
-                <div class="row-icon">
-                  <p class="contador">0</p>
-                  <i class="bx bx-heart corazon"></i>
-                </div>
-              </div>
-              <h3 id="work-8-title">Click Ball game, supera tu puntuacion!</h3>
-            </div>
-
+            <h3 id="freelance-1-title">DFS Estudio</h3>
           </div>
-        </section>
 
-
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">    
-            <div class="container">
-                <!-- <div class="con"> -->
-                    <div class="contact-left">
-                        <h1 class="sub-title section-title contact-title" id="sub-title">Contacto</h1>
-                        <p title="Gmail"><a href="mailto:julianrodriguezfarias@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a> julianrodriguezfarias@gmail.com</p>
-                        <p title="Whatsapp"><a href="https://wa.me/542494018307" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> 🇦🇷(+54)2494018307</p>
-                        <div class="social-icons">
-                          <a class="a-icon" href="https://www.instagram.com/colorodriguezf/" target="_blank"><i class="fab fa-instagram"></i></a>
-                          <a class="a-icon" href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                          <a class="a-icon" href="https://github.com/colorodriguezf" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="contact-right">
-                        <form class="contact__form"  action="https://formspree.io/f/xoqgalpr" method="POST" id="my-form">
-                          <div class="input-container">
-                            <input type="text" name="nombre" id="nombre" class="styled-input" />
-                            <label for="nombre" class="hidden-label">Nombre</label>
-                          </div> 
-                          <div class="input-container">
-                            <input type="email" name="email" id="email" class="styled-input" required>
-                            <label for="email" class="hidden-label">Email</label>
-                          </div> 
-                          <div class="input-container">
-                            <input type="text" name="asunto" id="asunto" class="styled-input" required>
-                            <label for="asunto" class="hidden-label">Asunto</label>
-                          </div> 
-                          <div class="input-container">
-                            <textarea name="message" id="message" rows="4" class="styled-input" required></textarea>
-                            <label for="message" class="hidden-label mensaje">Mensaje</label>
-                          </div>   
-                          <div class="contenedor_btn_form">
-                            <button type="submit" class="btn btn3" value="enviar" id="btn__contact">Enviar</button>
-                          </div>                                              
-                        </form>
-                    </div>
-                <!-- </div> -->
-            </div>
-          </section>
-          <div class="modal-gmail" id="modal__gmail">
-              <div class="modal-cont">
-                  <div class="modal-header-gmail">
-                    <span class="close-btn-gmail">&times;</span>
-                    <p class="msj_enviado">Mensaje enviado con exito!</p>
+          <!-- Proyecto 2 -->
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/freelance/freelance-estudiochiesa.png" alt="" class="hoverable-image" />
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>estudiochiesa.com.ar</p>
+                  <div class="container-layer-a">
+                    <a href="http://estudiochiesa.com.ar/" target="_blank" title="Ver página">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
                   </div>
-                  <div>
-                    <p id="agradecer"></p>
-                    <p>Su mensaje sera respondido lo antes posible </p>
-                  </div>
-                  <div class="modal-footer-gmail">
-                    <a href="https://www.instagram.com/colorodriguezf/" class="footer__icon" ><i class="bx bxl-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" class="footer__icon" ><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/colorodriguezf" class="footer__icon" ><i class="bx bxl-github"></i></a>
-                  </div>
+                </div>
               </div>
-          </div>      
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="freelance-2-category">Rediseño</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="freelance-2-title">Home Estudio Chiesa</h3>
+          </div>
+        </div>
+      </section>
+
+      <!--===== WORK =====-->
+      <section class="work section" id="work">
+        <h2 class="section-title" id="work-title">Projects</h2>
+
+        <div class="works-content">
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/trabajo_figma_musica.png" alt="App de música Spoiler Five Inc."
+                class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>Diseño en Figma + Desarrollo web (HTML, CSS, JS)</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/final-interfaces/prototipo-funcional/index.html"
+                      target="_blank" title="Ver página"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://www.figma.com/design/1WNmIqtyuIkbZZ2PxnJshC/Final-Interfaces-2025---Spoiler-Five-Inc.?node-id=0-1&t=oDbJTQYNdvScnDIY-1"
+                      target="_blank" title="Ver diseño en Figma"><i class="fab fa-figma"></i></a>
+                    <a href="https://github.com/colorodriguezf/final-interfaces/tree/gh-pages" target="_blank"
+                      title="Ver código fuente"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-row">
+              <div class="row-text">
+                <h6>App de Música</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+
+            <h3>Spoiler Five Inc.</h3>
+          </div>
+
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/apalabrados.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS (jQuery)</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/apalabrados/" target="_blank" title="Ver pagina"><i
+                        class="fas fa-external-link-alt"></i></a>
+                    <!-- <a href="https://github.com/colorodriguezf/apalabrados" target="_blank" title="Ver codigo fuente"><i class="fab fa-github"></i></a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-1-category">Juego</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-1-title">Juego de adivinar la palabra</h3>
+          </div>
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/spotify.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/clonSpotify/" target="_blank" title="Ver pagina"><i
+                        class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/colorodriguezf/clonSpotify" target="_blank" title="Ver codigo fuente"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-2-category">Interfaz</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-2-title">Clon de la interfaz de Spotify</h3>
+          </div>
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/netflix.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/clonNetflix/" target="_blank" title="Ver pagina"><i
+                        class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/colorodriguezf/clonNetflix" target="_blank" title="Ver codigo fuente"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-3-category">Interfaz</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-3-title">Clon de la interfaz de Netflix</h3>
+          </div>
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/sorteate.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/sorteate/" target="_blank" title="Ver pagina"><i
+                        class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/colorodriguezf/sorteate" target="_blank" title="Ver codigo fuente"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-4-category">Sorteos</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-4-title">App de sorteos</h3>
+          </div>
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/anotadorTruco.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS (POO)</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/ContadorTruco/" target="_blank" title="Ver pagina"><i
+                        class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/colorodriguezf/ContadorTruco" target="_blank"
+                      title="Ver codigo fuente"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-5-category">Anotador</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-5-title">Anotador de truco tradicional</h3>
+          </div>
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/piedraPapelTijera.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/piedra_papel_tijera/" target="_blank"
+                      title="Ver pagina"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/colorodriguezf/piedra_papel_tijera" target="_blank"
+                      title="Ver codigo fuente"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-6-category">Game</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-6-title">¡Piedra, Papel, o Tijera!</h3>
+          </div>
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/climaApp.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io/clima/" target="_blank" title="Ver pagina"><i
+                        class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/colorodriguezf/clima.git" target="_blank" title="Ver codigo fuente"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-7-category">Clima</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-7-title">Ingresa tu ciudad</h3>
+          </div>
+
+          <div class="work-content">
+            <div class="hoverable-image-container">
+              <img src="img/works/clickBall.png" alt="" class="hoverable-image">
+              <div class="layer-overlay">
+                <div class="layer">
+                  <p>HTML, CSS y JS</p>
+                  <div class="container-layer-a">
+                    <a href="https://colorodriguezf.github.io//Click-ball/" target="_blank" title="Ver pagina"><i
+                        class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/colorodriguezf/Click-ball" target="_blank" title="Ver codigo fuente"><i
+                        class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-row">
+              <div class="row-text">
+                <h6 id="work-8-category">Juego</h6>
+              </div>
+              <div class="row-icon">
+                <p class="contador">0</p>
+                <i class="bx bx-heart corazon"></i>
+              </div>
+            </div>
+            <h3 id="work-8-title">Click Ball game, supera tu puntuacion!</h3>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--===== CONTACT =====-->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <!-- <div class="con"> -->
+          <div class="contact-left">
+            <h1 class="sub-title section-title contact-title" id="sub-title">Contacto</h1>
+            <p title="Gmail"><a href="mailto:julianrodriguezfarias@gmail.com" target="_blank"><i
+                  class="fa-regular fa-envelope"></i></a> julianrodriguezfarias@gmail.com</p>
+            <p title="Whatsapp"><a href="https://wa.me/542494018307" target="_blank"><i
+                  class="fa-brands fa-whatsapp"></i></a> 🇦🇷(+54)2494018307</p>
+            <div class="social-icons">
+              <a class="a-icon" href="https://www.instagram.com/colorodriguezf/" target="_blank"><i
+                  class="fab fa-instagram"></i></a>
+              <a class="a-icon" href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" target="_blank"><i
+                  class="fab fa-linkedin"></i></a>
+              <a class="a-icon" href="https://github.com/colorodriguezf" target="_blank"><i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form class="contact__form" action="https://formspree.io/f/xoqgalpr" method="POST" id="my-form">
+              <div class="input-container">
+                <input type="text" name="nombre" id="nombre" class="styled-input" />
+                <label for="nombre" class="hidden-label">Nombre</label>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" id="email" class="styled-input" required>
+                <label for="email" class="hidden-label">Email</label>
+              </div>
+              <div class="input-container">
+                <input type="text" name="asunto" id="asunto" class="styled-input" required>
+                <label for="asunto" class="hidden-label">Asunto</label>
+              </div>
+              <div class="input-container">
+                <textarea name="message" id="message" rows="4" class="styled-input" required></textarea>
+                <label for="message" class="hidden-label mensaje">Mensaje</label>
+              </div>
+              <div class="contenedor_btn_form">
+                <button type="submit" class="btn btn3" value="enviar" id="btn__contact">Enviar</button>
+              </div>
+            </form>
+          </div>
+          <!-- </div> -->
+        </div>
+      </section>
+      <div class="modal-gmail" id="modal__gmail">
+        <div class="modal-cont">
+          <div class="modal-header-gmail">
+            <span class="close-btn-gmail">&times;</span>
+            <p class="msj_enviado">Mensaje enviado con exito!</p>
+          </div>
+          <div>
+            <p id="agradecer"></p>
+            <p>Su mensaje sera respondido lo antes posible </p>
+          </div>
+          <div class="modal-footer-gmail">
+            <a href="https://www.instagram.com/colorodriguezf/" class="footer__icon"><i
+                class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" class="footer__icon"><i
+                class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/colorodriguezf" class="footer__icon"><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+      </div>
       <!-- <iframe src="https://colorodriguezf.github.io/ContadorTruco/" width="850"
       height="800">
-      </iframe> --> 
+      </iframe> -->
 
       <!--===== FOOTER =====-->
       <footer class="footer" id="footer">
         <p class="footer__title"><span>J</span>ulian<span>RF</span><span class="punto__logo">.</span></p>
         <div class="footer__social">
-            <a href="https://www.instagram.com/colorodriguezf/" class="footer__icon" target="_blank"><i class="bx bxl-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" class="footer__icon" target="_blank"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://github.com/colorodriguezf" class="footer__icon" target="_blank"><i class="bx bxl-github"></i></a>
+          <a href="https://www.instagram.com/colorodriguezf/" class="footer__icon" target="_blank"><i
+              class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/julian-rodriguez-farias-18262b119/" class="footer__icon"
+            target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/colorodriguezf" class="footer__icon" target="_blank"><i
+              class="bx bxl-github"></i></a>
         </div>
-        <p class="footer__copy">&#169;by <span>J</span>ulian<span>RF</span><span class="punto__logo">.</span> <span class="derechos">Todos los erechos reservados</span></p>
+        <p class="footer__copy">&#169;by <span>J</span>ulian<span>RF</span><span class="punto__logo">.</span> <span
+            class="derechos">Todos los erechos reservados</span></p>
       </footer>
     </div>
-  </body>
+</body>
 
-  <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script> <!--iconos footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script> <!--efecto typed -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-  <!--Slider  -->
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!--  -->
+<script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script> <!--iconos footer -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script> <!--efecto typed -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+<!--Slider  -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--  -->
 
-  <script src="js/script.js"></script>
-  <script src="js/traduccion.js"></script>
-  <script src="js/loader.js"></script>
-  <script src="js/slider.js"></script>
+<script src="js/script.js"></script>
+<script src="js/traduccion.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/slider.js"></script>
 
-  </html>
+</html>
